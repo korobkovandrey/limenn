@@ -1,0 +1,2156 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #fff
+	opacity: .5
+	font-size: 17px
+
+*:-moz-placeholder
+	color: #fff
+	opacity: .5
+	font-size: 17px
+
+*::-moz-placeholder
+	color: #fff
+	opacity: .5
+	font-size: 17px
+
+*:-ms-input-placeholder
+	color: #fff
+	opacity: .5
+	font-size: 17px
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	outline: none
+
+a, a:hover, a:focus, a:active, a:visited
+	text-decoration: none
+	transition: .3s linear
+
+html
+	overflow-x: hidden
+
+body
+	font-size: 15px
+	letter-spacing: -0.2px
+	line-height: 1.3
+	font-weight: 400
+	font-family: $AvertaDemoPE-Regular
+	overflow-x: hidden
+	opacity: 1
+	font-size: 15px
+	color: #222222
+	background-image: url(../img/content-bg.png)
+	background-repeat: repeat
+	background-color: #faf8f5
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+
+h1,h2,h3,h4,h5,h6
+	font-family: $AvertaDemoPE-Regular
+	font-weight: normal
+
+h1
+	font-size: 40px
+
+h2
+	font-size: 30px
+
+h3
+	font-size: 21px
+img
+	max-width: 100%
+	height: auto
+
+p 
+	a 
+		color: #4496d2
+		text-decoration: underline
+	b,strong
+		font-family: $AvertaDemoPE-ExtraboldItalic
+
+li
+	margin-bottom: 5px
+
+blockquote
+	padding: 43px 81px 48px
+	background-image: linear-gradient(to left, #90d7ff, #56c7ff)
+	font-size: 21px
+	color: rgba(#222, .7)
+	margin-bottom: 50px
+	position: relative
+	&::after,&::before
+		content: ''
+		position: absolute
+		width: 29.6px
+		height: 34px
+		background-size: contain!important
+		background-repeat: no-repeat
+	&::after
+		top: 21px
+		left: 21px
+		background: url(../img/blockquote-left.svg)
+	&::before
+		bottom: 21px
+		right: 21px
+		background: url(../img/blockquote-right.svg)
+
+table
+	border-collapse: collapse
+	width: 100%
+	max-width: 100%
+	margin-bottom: 20px
+	thead th
+		vertical-align: bottom
+		border-bottom: 2px solid #eceeef
+		text-align: left
+	th 
+		color: #fff
+		background-image: linear-gradient(to bottom,#90d7ff,#56c7ff)
+
+.table th, .table td
+	padding: 0.75rem
+	vertical-align: top
+	border-top: 1px solid #eceeef
+
+.wrapper
+	max-width: 1210px
+	margin: 0 auto
+	padding: 0 15px
+
+.btn-primary
+	font-size: 15px
+	color: #202020
+	padding: 25px 28px
+	border-radius: 5px
+	background-image: linear-gradient(to right, #fecc00, #ffed00)
+	box-shadow: 0 0 30px 0 rgba(254, 205, 0, 0.7)
+	text-transform: uppercase
+	display: inline-block
+	&:hover
+		background-image: linear-gradient(to right, #ffd734, #fff45e)
+		transform: translate(0, -7px)
+
+.section-header
+	text-align: center
+	padding: 40px 0
+	&__ico
+		width: 80px
+		border-radius: 15px
+		height: 90px
+		margin: 0 auto 15px
+		img
+			object-fit: cover
+	&__title
+		font-size: 40px
+		letter-spacing: -0.4px
+
+.red-link
+  color: #ff7575
+  font-family: $AvertaDemoPE-ExtraboldItalic
+  text-decoration: none
+  &:hover
+  	color: #65cdf7
+
+.blue-link
+  color: #65cdf7
+  font-family: $AvertaDemoPE-ExtraboldItalic
+  text-decoration: none
+  &:hover
+  	color: #ff7575
+/* modal */
+#feedback
+	display: none
+	background: transparent
+
+.arrow-top
+	position: fixed
+	bottom: 30px
+	left: 40px
+	width: 90px
+	height: 100px
+	cursor: pointer
+	background-size: contain!important
+	background-repeat: no-repeat!important
+	background: url(../img/arrow-top.svg)
+	z-index: 99
+	display: none
+	&__open
+		display: block
+
+.fancybox-slide
+	background-color: rgba(0, 0, 0, 0.6)
+
+.fancybox-close-small
+	position: fixed
+	top: 50px
+	right: 50px
+	width: 25px
+	border-radius: 0
+	height: 25px
+	&::after,&::before
+		content: ''
+		position: absolute
+		top: 0
+		height: 100%
+		left: 12px
+		width: 3px
+		border-radius: 0
+		background: #fff
+	&::after
+		transform: rotate(-45deg)
+	&::before
+		transform: rotate(45deg)
+
+.modal
+	&-success
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: none
+		z-index: 101
+		display: none
+		p 
+			font-size: 23px
+			color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			max-width: 400px
+			text-align: center
+			padding: 10px
+			a 
+				color: #ffed00
+				&:hover
+					color: #fff
+		&__close
+			position: fixed
+			top: 50px
+			right: 50px
+			width: 25px
+			cursor: pointer
+			height: 25px
+			&::after,&::before
+				content: ''
+				position: absolute
+				top: 0
+				height: 100%
+				left: 15px
+				width: 3px
+				background: #fff
+			&::after
+				transform: rotate(-45deg)
+			&::before
+				transform: rotate(45deg)
+	&-close
+		display: none
+	&-call
+		&_wrap
+			max-width: 536px
+			padding: 0 10px
+		&__title
+			font-size: 40px
+			margin-bottom: 24px
+			color: #fff
+			text-align: center
+			letter-spacing: -0.3px 
+		&__text
+			font-size: 20px
+			color: #fff
+			text-align: center
+			margin-bottom: 10px
+		.contacts-descr__input-checkbox
+			max-width: 400px
+
+/* -- header -- */
+.header
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 100
+	transition: .2s linear
+	&-row
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		max-width: 1220px
+		margin: 0 auto
+		padding: 0 15px
+	&-logo
+		max-width: 115px
+		padding-top: 38px
+		&__2
+			display: none
+	&-nav
+		padding-top: 38px
+		ul
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			line-height: 0
+		li
+			font-size: 14px
+			letter-spacing: -0.2px
+			line-height: 1.3
+			list-style: none
+			a
+				color: #fff
+				display: block
+				padding: 2px 20px
+			&:hover a
+				color: #ffed00!important
+		&__modal-btn
+			display: none
+	&-music
+		padding-top: 37px
+		cursor: pointer
+		audio
+			display: none
+		&__wrap
+			display: flex
+			flex-flow: row nowrap
+		span
+			font-size: 11px
+			color: #fff
+			max-width: 61px
+			display: block
+	&-phone
+		&__flag
+			background: url(../img/phone-bg.svg)
+			background-repeat: no-repeat
+			background-size: contain
+			height: 172px
+			width: 188px
+			border-radius: 0 0 5px 5px
+			padding: 14px 20px 51px 25px
+		&__link
+			color: #2a2a2a
+			font-size: 15px
+			letter-spacing: -0.2px;
+			margin-bottom: 10px
+			display: block
+			border-bottom: 1px dashed #2a2a2a
+			line-height: 1.2
+			span
+				font-size: 22px
+			&:hover
+				color: #ffed00
+				border-color: #ffed00
+		&__button
+			margin-bottom: 11px
+			color: #222
+			text-transform: uppercase
+			font-size: 11px
+			padding: 8.6px 18.5px 9.4px 18.5px
+			display: inline-block
+			background: #fff
+			border-radius: 100px
+			&:hover
+				background: #ffed00
+		p
+			max-width: 110px
+			margin: 0 auto
+			text-align: center
+			font-size: 10px
+			color: rgba(#222, 0.5)
+	&-text__mob
+		display: none
+		margin: 0!important
+		max-width: 150px!important
+	&-fixed
+		background: #fff
+		max-height: 95px
+		overflow: hidden
+		position: fixed
+		box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2)
+		.header
+			&-nav
+				li
+					a
+						color: #2a2a2a
+			&-logo
+				&__1
+					display: none
+				&__2
+					display: block
+		.header-music__wrap span
+			color: #2a2a2a
+		.header-logo
+			padding-top: 17px
+
+.animate-spinner-block
+	min-height: 25px
+	padding-top: 3px
+	margin-right: 18px
+
+.animate-spinner-block__item
+  height: 15px
+  animation: spinner-block-top 1.5s infinite
+  display: inline-block
+  width: 4px
+  height: 7px
+  border-radius: 30px
+  background: #ffc735
+  vertical-align: middle
+  &:nth-child(1)
+  	animation-delay: .25s
+  	height: 22px
+  &:nth-child(2)
+  	animation-delay: .5s
+  	height: 18px
+  &:nth-child(3)
+  	animation-delay: .75s
+  	height: 14px
+  &:nth-child(4)
+  	animation-delay: 1s
+  	height: 18px
+  &:nth-child(5)
+  	animation-delay: 1.25s
+  	height: 22px
+  &:nth-child(6)
+  	animation-delay: 1.5s
+  &:nth-child(7)
+  	animation-delay: 1.75s
+  &:nth-child(8)
+  	animation-delay: 2s
+  &:nth-child(9)
+  	animation-delay: 2.25s
+
+@keyframes spinner-block-top
+	0%, 100%
+		height: 22px
+	50%
+		height: 10px
+
+
+.menu-bar span, .menu-bar span:before, .menu-bar span:after
+	display: block
+	height: 2px
+	width: 18px
+	position: absolute
+	top: 50%
+	margin-top: -1.25px
+	left: 50%
+	margin-left: -9px
+	background: #222
+
+.menu-bar
+	width: 18px
+	position: relative
+	height: 12px
+	z-index: 1000
+	cursor: pointer
+	display: none
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	span
+		&:after
+			content: ''
+			transition: all .2s ease
+			margin-top: 4px
+		&:before
+			content: ''
+			transition: all .2s ease
+			margin-top: -6px
+
+.header-open
+	.menu-bar
+		span
+			background: transparent
+			&:after
+				transform: rotate(-135deg)
+				margin-top: 0
+			&:before
+				transform: rotate(135deg)
+				margin-top: 0
+
+/* -- banner -- */
+.banner
+	height: 100vh
+	position: relative
+	background-size: cover!important
+	background: url(../img/banner-bg.jpg)
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 50%
+		height: 100%
+		background-image: linear-gradient(to left, rgba(60, 48, 42, 0), rgba(255, 212, 180, 0.63))
+	&-bubbles
+		position: absolute
+		height: 95px
+		width: 95px
+		background: url(../img/bubbles.svg)
+		background-size: contain!important
+		background-repeat: no-repeat!important
+		opacity: .2
+	&-cloud
+		position: absolute
+		height: 118px
+		width: 181px
+		background: url(../img/cloud.svg)
+		background-size: contain!important
+		background-repeat: no-repeat!important
+		opacity: 1
+		&__1
+			top: 30%
+			left: 90%
+			width: 232px
+			height: 150px
+			animation: cloud1 55s linear 1
+		&__2
+			top: 70%
+			left: 50%
+			width: 289px
+			height: 252px
+			animation: cloud2 45s linear 1
+		&__3
+			top: 90%
+			left: 70%
+			width: 181px
+			height: 118px
+			animation: cloud3 55s linear 1
+		&__4
+			top: 12%
+			left: 50%
+			width: 192px
+			height: 252px
+			animation: cloud5 25s linear 1
+		&__5
+			top: 75%
+			left: 30%
+			width: 207px
+			height: 142px
+			background: url(../img/cloud-3.svg)
+			animation: cloud5 35s linear 1
+		&__6
+			top: 90%
+			left: 10%
+			width: 181px
+			height: 118px
+			background: url(../img/cloud-3.svg)
+			animation: cloud6 10s linear 1
+		&__7
+			top: 8%
+			left: 15%
+			width: 209px
+			height: 100px
+			background: url(../img/cloud-3.svg)
+			animation: cloud7 10s linear 1
+		&__8
+			top: 108%
+			left: 90%
+			width: 209px
+			height: 140px
+			background: url(../img/cloud-3.svg)
+			animation: cloud8 35s linear 1
+		&__9
+			top: 50%
+			left: 50%
+			width: 209px
+			height: 150px
+			background: url(../img/cloud.svg)
+			animation: cloud9 25s linear 1
+		&__10
+			top: 90%
+			left: 110%
+			width: 249px
+			height: 170px
+			background: url(../img/cloud-3.svg)
+			animation: cloud10 50s linear 1
+		&__11
+			top: 110%
+			left: -50%
+			width: 349px
+			height: 230px
+			background: url(../img/cloud-3.svg)
+			animation: cloud11 80s linear infinite
+		&__12
+			top: 120%
+			left: -30%
+			width: 439px
+			height: 320px
+			background: url(../img/cloud-3.svg)
+			animation: cloud12 75s linear infinite
+		&__13
+			top: 100%
+			left: -20%
+			width: 449px
+			height: 290px
+			background: url(../img/cloud-3.svg)
+			animation: cloud13 60s linear infinite
+		&__14
+			top: 80%
+			left: -20%
+			width: 309px
+			height: 120px
+			background: url(../img/cloud-3.svg)
+			animation: cloud14 40s linear infinite
+		&__15
+			top: 75%
+			left: -35%
+			width: 319px
+			height: 180px
+			background: url(../img/cloud-3.svg)
+			animation: cloud15 75s linear infinite
+		&__16
+			top: 65%
+			left: -35%
+			width: 349px
+			height: 230px
+			background: url(../img/cloud-3.svg)
+			animation: cloud16 55s linear infinite
+		&__17
+			top: 60%
+			left: -35%
+			width: 350px
+			height: 270px
+			background: url(../img/cloud-3.svg)
+			animation: cloud17 63s linear infinite
+	.wrapper
+		position: relative
+		z-index: 1
+		height: 100vh
+	&-descr
+		padding: 0 0 0 104px
+		max-width: 490px
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translate(0, -50%)
+		&__title
+			font-size: 97px
+			color: #fff
+			font-family: $NautilusPompilius
+			letter-spacing: -0.8px
+			line-height: .9
+			span
+				font-size: 16px
+				font-family: $AvertaDemoPE-Regular
+				display: block
+				margin: 0 0 23px 10px
+		&__subtitle
+			text-align: right
+			color: #fff
+			font-size: 24px
+			margin-bottom: 70px
+			letter-spacing: -0.2px
+			font-family: $NautilusPompilius
+		&__link
+			position: relative
+			z-index: 1
+			max-width: 205px
+			a
+				z-index: 5
+				position: relative
+			&::after,&::before
+				content: ''
+				position: absolute
+				z-index: 0
+				background-repeat: no-repeat!important
+				background-size: contain!important
+			&::after
+				height: 60px
+				width: 90px
+				right: -60px
+				bottom: -48px
+				background: url(../img/map.png)
+			&::before
+				bottom: 5px
+				right: -22px
+				height: 22px
+				width: 16px
+				background: url(../img/banner-mar.svg)
+	&-stock
+		position: absolute
+		right: -270px
+		top: 50%
+		background: #fff
+		height: 212px
+		width: 320px
+		border-radius: 15px 0 0 15px
+		transform: translate(0%,-50%)
+		overflow: hidden
+		transition: .2s linear
+		z-index: 10
+		animation: banner-stock 10s linear infinite
+		&__header
+			position: absolute
+			left: -81px
+			top: 81px
+			width: 212px
+			height: 50px
+			border-radius: 15px 15px 0 0
+			background-image: linear-gradient(to right, #fecc00, #ffed00)
+			transform: rotate(270deg)
+			text-align: right
+			padding: 15px 30px
+			cursor: pointer
+			&-text
+				font-size: 15px
+				letter-spacing: -0.1px
+				color: #2a2a2a
+				font-weight: 500
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0%
+					background-size: contain!important
+					background: url(../img/star.svg)
+					width: 18px
+					height: 17px
+		&__active
+			right: 0
+			animation: none
+			.banner-stock__header-text::after
+				background: url(../img/close.png)
+				width: 14px
+				height: 14px
+		&__descr
+			padding: 20px 23px 21px 72px
+			background-position: bottom right!important
+			background-repeat: no-repeat!important
+			background: url(../img/stock.png)
+			&-title
+				font-family: $AvertaDemoPE-Regular
+				font-size: 21px
+				letter-spacing: -0.2px
+				color: #2a2a2a
+				line-height: 1.2
+				margin-bottom: 14px
+				font-weight: 400
+			&-text
+				font-size: 12px
+				letter-spacing: -0.1px
+				width: 165px
+				color: rgba(#2a2a2a, .5)
+				margin-bottom: 25px
+			&-link
+				color: #2a2a2a
+				font-size: 14px
+				font-weight: 600
+				&:hover
+					color: #fecc00
+
+@keyframes banner-stock
+	0%
+		right: -270px
+	19%
+		right: -270px
+	20%
+		right: -250px
+	22%
+		right: -270px
+	24%
+		right: -250px
+	26%
+		right: -270px
+	47%
+		right: -270px
+	48%
+		right: -250px
+	50%
+		right: -270px
+	52%
+		right: -250px
+	54%
+		right: -270px
+	76%
+		right: -270px
+	77%
+		right: -250px
+	79%
+		right: -270px
+	81%
+		right: -250px
+	83%
+		right: -270px
+	100%
+		right: -270px
+
+@keyframes cloud1
+	0%
+		top: 30%
+		left: 90%
+	100%
+		left: -15%
+		top: 10%
+
+@keyframes cloud2
+	0%
+		top: 40%
+		left: 50%
+	100%
+		left: -15%
+		top: 30%
+
+@keyframes cloud3
+	0%
+		top: 90%
+		left: 70%
+	100%
+		left: -15%
+		top: 20%
+
+@keyframes cloud4
+	0%
+		top: 30%
+		left: 90%
+	100%
+		left: -15%
+		top: 10%
+
+@keyframes cloud5
+	0%
+		top: 30%
+		left: 90%
+	100%
+		left: -15%
+		top: 10%
+
+@keyframes cloud6
+	0%
+		top: 80%
+		left: 10%
+	100%
+		left: -15%
+		top: 40%
+
+@keyframes cloud7
+	0%
+		top: 8%
+		left: 15%
+	100%
+		left: -15%
+		top: 0%
+
+@keyframes cloud8
+	0%
+		top: 108%
+		left: 90%
+	100%
+		left: -15%
+		top: 25%
+
+@keyframes cloud9
+	0%
+		top: 50%
+		left: 50%
+	100%
+		left: -15%
+		top: 0%
+
+@keyframes cloud10
+	0%
+		top: 90%
+		left: 110%
+	100%
+		left: -5%
+		top: 5%
+
+@keyframes cloud11
+	0%
+		top: 110%
+		left: -60%
+	100%
+		left: -10%
+		top: 5%
+
+@keyframes cloud12
+	0%
+		top: 120%
+		left: 95%
+	100%
+		left: -5%
+		top: 25%
+
+@keyframes cloud13
+	0%
+		top: 110%
+		left: 70%
+	100%
+		left: -5%
+		top: 20%
+
+@keyframes cloud14
+	0%
+		top: 80%
+		left: 115%
+	100%
+		left: -10%
+		top: 35%
+
+@keyframes cloud15
+	0%
+		top: 75%
+		left: -15%
+	100%
+		left: -5%
+		top: 0%
+
+@keyframes cloud16
+	0%
+		top: 65%
+		left: -15%
+	100%
+		left: -10%
+		top: -20%
+
+@keyframes cloud17
+	0%
+		top: 80%
+		left: -35%
+	100%
+		left: -15%
+		top: 25%
+
+.div-remove
+	display: none
+	opacity: 0
+
+.mouse-icon
+	border: 1px solid #fff
+	border-radius: 15px
+	height: 40px
+	width: 24px
+	display: block
+	z-index: 10
+	opacity: 0.8
+
+.weel
+	animation-name: drop
+	animation-duration: 1.5s
+	animation-timing-function: linear
+	animation-delay: 0s
+	animation-iteration-count: infinite
+	animation-play-state: running
+	position: relative
+	border-radius: 10px
+	background: transparent
+	width: 2px
+	border: 1px solid #fff
+	height: 6px
+	margin-left: auto
+	margin-right: auto
+
+.to_down
+	position: absolute
+	bottom: 40px
+	left: 50%
+	z-index: 2
+	transform: translate(-50%,0)
+	cursor: pointer
+
+@keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+	30%
+		top: 10px
+		opacity: 1
+	100%
+		top: 25px
+		opacity: 0
+
+/* -- about -- */
+.about
+	padding: 0 0 180px
+	&-wrap
+		max-width: 1050px
+		margin: 0 auto
+		position: relative
+		&::after,&::before
+			content: ''
+			position: absolute
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			z-index: 0
+		&::after
+			width: 376px
+			height: 296px
+			bottom: -129px
+			right: 6px
+			background: url(../img/people-1.png)
+		&::before
+			width: 340px
+			height: 332px
+			opacity: 0.7
+			top: -79px
+			left: 0
+			background: url(../img/sheet-1.png)
+	&-descr
+		max-width: 777px
+		margin: 0 auto
+		z-index: 1
+		padding: 74px 83px
+		border-radius: 100px 0 100px 0
+		background-color: #fff
+		box-shadow: -70px 70px 53px 0 rgba(0, 0, 0, 0.05)
+		position: relative
+		&::after,&::before
+			content: ''
+			position: absolute
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			z-index: 1
+		&::after
+			width: 246px
+			height: 167px
+			bottom: 0
+			right: -20px
+			background: url(../img/people-2.png)
+		&::before
+			width: 191.7px
+			height: 251.8px
+			top: 0
+			left: 0
+			background: url(../img/sheet-2.png)
+		p
+			letter-spacing: -0.1px
+			padding-bottom: 23px
+			z-index: 2
+			position: relative
+		&__link
+			padding: 24px 60px 23px 34px
+			font-size: 13px
+			margin-top: 29px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				right: 20px
+				top: 50%
+				margin: -10px 0 0
+				width: 20px
+				height: 20px
+				background: url(../img/button-ico.png)
+				background-size: contain
+				z-index: 1
+
+/* -- advantages -- */
+.advantages
+	display: flex
+	flex-flow: row wrap
+	&-column
+		width: 25%
+		height: 400px
+		background-size: cover!important
+		background-position: top center!important
+		position: relative
+		transition: .3s linear
+		&::after,&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+		&::before
+			width: 184px
+			height: 126px
+			opacity: 0.35
+			filter: blur(44px)
+			background-color: #ffc268
+		&::after
+			width: 100%
+			height: 100%
+			background-color: rgba(#5e4712, .5)
+			transition: .3s linear
+		&__descr
+			position: absolute
+			top: 160px
+			left: 50%
+			max-width: 280px
+			width: 100%
+			padding: 0 20px 0
+			transform: translate(-50%,0%)
+			text-align: center
+			z-index: 10
+			transition: .3s linear
+			&-title
+				font-family: $AvertaDemoPE-Regular
+				font-size: 30px
+				letter-spacing: -0.3px
+				color: #fff
+				font-weight: 400
+				padding: 0 0 30px
+				margin-bottom: 25px
+				width: 100%
+				transition: .3s linear
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 50%
+					margin-left: -83px
+					width: 166px
+					height: 1px
+					opacity: 0
+					background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff 52%, rgba(255, 255, 255, 0) 98%)
+			&-text
+				font-size: 15px
+				color: #fff
+				max-width: 250px
+				margin: 0 auto
+				opacity: 0
+				transition: .2s linear
+		&:hover
+			transform: scale(1.05)
+			z-index: 1
+			&::after
+				background-color: rgba(#5e4712, .3)
+			&::before
+				opacity: 0.2
+			.advantages-column__descr
+				top: 50px
+				&-title
+					&::after
+						opacity: 1
+				&-text
+					opacity: 1
+
+/* -- offers -- */
+.offers
+	background-size: cover!important
+	background-position: center!important
+	background: url(../img/offers-bg.jpg)
+	padding-bottom: 50px
+	&-title
+		padding: 43px 0 55px
+		color: #fff
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+	&-column
+		position: relative
+		max-width: 372px
+		width: 100%
+		margin-bottom: 55px
+		&__descr
+			//clip-path: polygon(50% 0%, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%)
+			background: #fff
+			max-width: 302px
+			min-height: 340px
+			width: 100%
+			padding: 116px 57px 0 29.6px
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			background: url(../img/offers-descr-bg.svg)
+		&__img
+			position: absolute
+			top: 7px
+			right: -5px
+			//transform: translate(-10px, 0)
+			z-index: 1
+		&__title
+			position: relative
+			max-width: 215px
+			font-size: 21px
+			padding-bottom: 12px
+			margin-bottom: 10px
+			line-height: 1.1
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 48px
+				height: 3px
+				background-image: linear-gradient(to right, #fecc00, #ffed00)
+		&__text
+			font-size: 15px
+			color: rgba(#222,.5)
+		&__link
+			position: absolute
+			background: url(../img/offers-button-bg.svg)
+			//clip-path: polygon(50% 0%, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%)
+			bottom: -22px
+			width: 110px
+			height: 123.6px
+			border-radius: 15px
+			right: 86.8px
+			display: flex
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			img
+				width: 27px
+				margin: auto
+		&:hover
+			.offers-column__link img
+				animation: .7s tremor linear infinite
+	&-link__all
+		text-align: center
+		a 
+			color: #202020
+			display: inline-block
+			text-transform: uppercase
+			font-size: 13px
+			padding: 27px 70px
+			line-height: .8
+			border-radius: 5px
+			background-image: linear-gradient(to right, #fecc00, #ffed00)
+			&:hover
+				background-image: linear-gradient(to right, #ffd734, #fff45e)
+				transform: translate(0, -7px)
+
+@keyframes tremor
+	0%, 25%
+		left: 1px
+		top: 1px
+		transform: translateX(5%)
+		opacity: 0.6
+	50%, 100%
+		left: -1px
+		top: -1px
+		transform: translateX(-3%)
+		opacity: 1
+
+/* -- info -- */
+.info
+	padding: 35px 0 163px
+	&-wrap
+		max-width: 1090px
+		margin: 0 auto
+		position: relative
+		&::after,&::before
+			content: ''
+			position: absolute
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			opacity: 0.7
+			z-index: 0
+		&::after
+			width: 313px
+			height: 293px
+			bottom: -62px
+			right: -20px
+			background: url(../img/info-house-1.png)
+		&::before
+			width: 262px
+			height: 289px
+			top: -30px
+			left: 10px
+			background: url(../img/info-crane-1.png)
+	&-descr
+		max-width: 777px
+		background: #fff
+		border-radius: 100px 0 100px 0
+		padding: 64px 69px 78px 83px
+		margin: 0 auto
+		box-shadow: -70px 70px 53px 0 rgba(0, 0, 0, 0.05)
+		position: relative
+		z-index: 2
+		position: relative
+		&::after,&::before
+			content: ''
+			position: absolute
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			z-index: 0
+		&::after
+			width: 137px
+			height: 231.1px
+			bottom: -21px
+			right: 0px
+			background: url(../img/info-house-2.png)
+		&::before
+			width: 153px
+			height: 257px
+			background-position: right!important
+			top: 0
+			left: 0
+			background: url(../img/info-crane-2.png)
+		&__row
+			display: flex
+			position: relative
+			flex-flow: row wrap
+			justify-content: space-between
+		&__column
+			margin-bottom: 43px
+			&-title
+				font-size: 21px
+				max-width: 240px
+				margin-bottom: 15px
+			&-link
+				line-height: .5
+				a
+					display: flex
+					flex-flow: row nowrap
+					align-items: center
+					color: #222
+					font-size: 13px
+					text-decoration: none
+					&:hover
+						color: #fecc00
+				img
+					max-width: 21.2px
+					margin-right: 12.2px
+		p
+			opacity: 0.9
+			margin-bottom: 20px
+		&__links
+			padding-top: 25px
+			a 
+				font-size: 13px
+				padding: 24px 58px 24px 30px
+				max-height: 64px
+				position: relative
+				img
+					position: absolute
+					top: 50%
+					right: 24px
+					transform: translate(0, -50%)
+					max-width: 21px
+			&-first
+				margin-right: 10px
+				border: solid 1px transparent
+				&:hover
+					border-color: rgba(#222222, 0)
+					box-shadow: none
+			&-last
+				border: solid 1px rgba(#222222, .3)
+				background: transparent
+				box-shadow: none
+				&:hover
+					border-color: transparent
+
+/* -- mortgage -- */
+.mortgage
+	min-height: 528px
+	background-size: cover!important
+	background-position: center!important
+	background: url(../img/mortgage-bg.jpg)
+	position: relative
+	padding: 43px 0 31px
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-image: linear-gradient(to left, rgba(60, 48, 42, 0), rgba(255, 212, 180, 0.63))
+	.wrapper
+		position: relative
+		z-index: 1
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+	&-column
+		&__last
+			display: flex
+			flex-flow: row nowrap
+			max-width: 250px
+			width: 100%
+		&__cat
+			//clip-path: polygon(50% 0%, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%)
+			background: #fff
+			max-width: 110px
+			height: 122.4px
+			width: 100%
+			margin-left: 17px
+			display: flex
+			color: #222
+			background: url(../img/mortgage-cat-bg.svg)
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			span
+				margin: auto
+				display: block
+				max-width: 91px
+				font-size: 14px
+				letter-spacing: -0.2px
+				text-align: center
+				font-family: $AvertaDemoPE-ExtraboldItalic
+			&:hover
+				transform: scale(.9)
+	&-title
+		max-width: 550px
+		font-size: 40px
+		color: #fff
+		line-height: 1.4
+		text-transform: uppercase
+		margin-bottom: 32px
+		&__first
+			font-size: 40px
+			color: #fff
+			margin-bottom: 45px
+			&-mob
+				display: none
+	&-link
+		color: #202020
+		display: inline-block
+		text-transform: uppercase
+		font-size: 13px
+		padding: 27px 29px
+		line-height: .8
+		border-radius: 5px
+		background: #fff
+		background-image: linear-gradient(to right,#fecc00,#ffed00)
+		margin-bottom: 78px
+		box-shadow: 0 0 30px 0 rgba(254,205,0,.7)
+		&:hover
+			background-image: linear-gradient(to right, #ffd734, #fff45e)
+			transform: translate(0, -7px)
+	&-bottom
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		&__img
+			align-items: center
+			display: flex
+			flex-flow: column wrap
+			padding: 5px
+			img
+				margin: auto
+
+
+/* -- gallery -- */
+.gallery
+	&-fotorama
+		position: relative
+
+.gallery-fotorama
+	.fotorama
+		&__nav-wrap
+			position: absolute
+			top: 50px
+			height: 130px
+
+	.fotorama__img
+		height: 118px
+
+	.fotorama__nav.fotorama__nav--thumbs
+		overflow: visible
+
+	.fotorama__nav--thumbs .fotorama__nav__frame
+		min-height: 118px!important
+		img
+			top: 0!important
+			left: 0!important
+			height: 118px!important
+
+	.fotorama__thumb
+		padding-right: 10px!important
+	.fotorama__thumb-border
+		height: 114px!important
+		border-color: transparent
+		border-bottom: 1px solid transparent!important
+		box-shadow: 0px 0px 11px 2px rgba(254,205,0,.9)
+
+.content-fotorama
+	margin-bottom: 40px
+/* -- map -- */
+#map
+	height: 522px
+	width: 100%
+
+.map
+	&-wrap
+		position: relative
+		&__info
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			background: url(../img/offers-descr-bg.svg)
+			max-width: 400px
+			max-height: 430px
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 40px
+			top: 50%
+			transform: translate(0, -50%)
+			z-index: 11
+			padding: 120px 40px
+			&-title
+				font-size: 23px
+				margin-bottom: 15px
+			&-text
+				font-size: 15px
+				margin-bottom: 10px
+				span
+					font-family: $AvertaDemoPE-ExtraboldItalic
+				a 
+					color: #222
+					text-decoration: none
+					&:hover
+						color: #ffed00!important
+
+/* -- contacts -- */
+.contacts
+	background-size: cover!important
+	padding: 49px 0 43px
+	background: url(../img/contact-bg.jpg)
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.6)
+		z-index: 0
+	.wrapper
+		position: relative
+		z-index: 1
+	&-header
+		padding-bottom: 20px
+		text-align: center
+		&__title
+			margin-bottom: 15px
+			color: #fff
+		&__text
+			font-size: 20px
+			margin: 0 auto
+			max-width: 492px
+			letter-spacing: -0.1px
+			font-weighnt: 400
+			color: #fff
+	&-descr
+		max-width: 424px
+		margin: 0 auto
+		&__input
+			margin-bottom: 23px
+			padding-top: 20px
+			position: relative
+			input
+				width: 100%
+				border: none
+				border-bottom: 2px solid #fff 
+				background-color: transparent!important
+				padding: 8px 0
+				color: #fff 
+				font-size: 17px
+			&-text
+				position: absolute
+				top: 50%
+				left: 0
+				font-size: 12px
+				opacity: 0
+				color: rgba(#fff,.5)
+				transition: .2s linear
+				&.input-name__active
+					opacity: 1
+					top: 0
+			&-checkbox
+			  display: flex
+			  align-items: center
+			  max-width: 370px
+			  margin: 0 auto 30px
+			  input
+			  	display: none
+			  	&:checked
+			      &~.custom-checkbox
+			        &::after
+			          background-image: linear-gradient(to top, #fecc00, #ffed00)
+			          box-shadow: 0 0 20px 0 rgba(254, 204, 0, 0.7)
+		&__notification
+			color: rgba(#fff,.5)
+			font-size: 12px
+			margin-bottom: 30px
+			text-align: center
+		&__link
+			text-align: center
+			margin-bottom: 33px
+			button
+				border: none
+				transition: .2s linear
+				cursor: pointer
+		&__text
+			font-size: 14px
+			color: rgba(#fff,.5)
+			width: 264px
+			margin: 0 auto
+			text-align: center
+
+.custom-checkbox
+  position: relative
+  display: block
+  min-width: 22px
+  height: 22px
+  margin-right: 13px
+  border: 1px solid #fff
+  border-radius: 2px
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    border-radius: 2px
+    left: 50%
+    margin: -7px 0 0 -7px
+    width: 14px
+    height: 14px
+    transition: all linear .1s
+
+.checkbox-text
+	color: #fff
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+	background-color: transparent!important
+	color: #fff!important
+
+.success
+	display: none
+
+/* -- footer -- */
+.footer
+	background-image: linear-gradient(to right, #1a1a1a, #414141)
+	padding: 40px 0 30px
+	position: relative
+	&::after,&::before
+		content: ''
+		position: absolute
+		background-size: contain!important
+		background-repeat: no-repeat!important
+	&::after
+		top: 0
+		left: 0
+		width: 270px
+		height: 110px
+		background: url(../img/footer-img-1.png)
+		background-position: left top
+	&::before
+		bottom: 0
+		right: 0
+		width: 250px
+		height: 160px
+		background: url(../img/footer-img-2.png)
+		background-position: right bottom
+	.wrapper
+		position: relative
+		z-index: 10
+	&-top
+		position: relative
+		padding-bottom: 25px
+		&__row
+			display: flex
+			flex-flow: row nowrap
+			justify-content: space-between
+		&__column
+			&-logo
+				max-width: 129px
+				max-height: 87px
+				width: 100%
+				margin-right: 50px
+				img
+					width: 100%
+			&-menu
+				flex: 1
+			&-nav
+				display: flex
+				flex-flow: row wrap
+				justify-content: space-between
+				ul
+					padding: 0 5px
+					li 
+						list-style: none
+						a
+							font-size: 15px
+							letter-spacing: -0.2px
+							display: block
+							color: #fff
+							margin-bottom: 20px
+							&:hover
+								color: #ffed00
+			&-last
+				text-align: right
+				margin-left: 50px
+		&__link
+			display: block
+			max-width: 208px
+			text-align: center
+			font-size: 11px
+			padding: 18px 38px 19px 19px
+			background: transparent
+			border: solid 1px rgba(#fff, .5)
+			box-shadow: none
+			color: #fff
+			position: relative
+			margin-bottom: 25px
+			img
+				position: absolute
+				top: 50%
+				right: 15px
+				transform: translate(0, -50%)
+				max-width: 16px
+				height: 20px
+			&:hover
+				background: transparent
+				border-color: #fff
+		&__phone
+			font-size: 16px
+			color: #fff
+			margin-bottom: 4px
+			display: block
+			&:hover
+				color: #ffed00
+			span
+				font-size: 23px
+		&__mail
+			font-size: 13px
+			color: #fff
+			display: inline-block
+			border-bottom: 1px solid #fff
+			&:hover
+				color: #ffed00
+				border-color: transparent
+	&-bottom
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		align-items: flex-end
+		&__column
+			&-map
+				max-width: 341px
+		p 
+			font-size: 13px
+			color: rgba(#fff,.5)
+	&-social
+		position: absolute
+		bottom: 0
+		left: 180px
+		width: 200px
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		li 
+			max-width: 24px
+			margin-right: 20px
+
+/* -- news -- */
+.page
+	&-header
+		min-height: 360px
+		background-size: cover!important
+		position: relative
+		padding: 165px 0 35px
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 50%
+			background-image: linear-gradient(to left, rgba(60, 48, 42, 0), rgba(255, 212, 180, 0.63))
+		.wrapper
+			position: relative
+			z-index: 10
+		&__title
+			font-size: 100px
+			color: #fff
+			font-family: $NautilusPompilius
+			letter-spacing: -0.8px
+			padding: 0 0 0 100px
+			line-height: 1
+			margin-bottom: 42px
+		ul
+			display: flex
+			flex-flow: row wrap
+			li
+				list-style: none
+				a 
+					padding: 4px 11px 5px
+					display: block
+					margin: 0 14px 5px 0
+					font-size: 15px
+					letter-spacing: -0.1px
+					color: #fff
+					border-radius: 100px
+					&.page-active, &:hover
+						background-image: linear-gradient(to right, #fecc00, #ffed00)
+						color: #373737		
+
+.content
+	&-news,&-building
+		padding: 51px 0 80px
+		&__year
+			display: flex
+			flex-flow: row wrap
+			margin-bottom: 30px
+			li
+				border-top: 2px solid #57c8ff
+				border-bottom: 2px solid #57c8ff
+				border-left: 2px solid #57c8ff
+				list-style: none
+				a 
+					display: block
+					font-size: 16px
+					color: #222
+					padding: 12px 5px 13px
+					min-width: 134px
+					text-align: center
+					&:hover,&.year-active,&.building-active
+						color: #fff
+						background: #57c8ff
+				&:last-child
+					border-right: 2px solid #57c8ff
+		&__month
+			display: flex
+			flex-flow: row wrap
+			margin-bottom: 40px
+			li 
+				list-style: none
+				a 
+					padding: 4px 9px 5px 11px
+					display: block
+					margin: 0 10px 5px 0
+					font-size: 15px
+					letter-spacing: -0.1px
+					color: #373737
+					border-radius: 100px
+					&.month-active, &:hover
+						background: #57c8ff
+						color: #fff
+
+.news
+	&-row
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+	&-article
+		padding: 35px
+		background-color: #fff 
+		background-size: cover!important
+		width: 31.7%
+		position: relative
+		margin-bottom: 30px
+		min-height: 328px
+		&__title
+			margin-bottom: 31px
+			font-size: 21px
+			color: #373737
+			max-width: 235px
+			z-index: 10
+			position: relative
+		&__text
+			font-size: 15px
+			color: rgba(#373737,.5)
+			max-width: 280px
+			z-index: 10
+			position: relative
+		&__link
+			text-transform: uppercase
+			font-size: 13px
+			color: #373737 
+			padding: 23px 43px 23px 43px
+			border: 1px solid rgba(#373737, .3)
+			position: absolute
+			left: 35px
+			bottom: 35px
+			z-index: 10
+			&:hover
+				color: #fff 
+				background: #57c8ff
+				border-color: #57c8ff
+		&.news-article__img
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: rgba(0,0,0,.6)
+			.news-article__title,.news-article__text
+				color: #fff
+			.news-article__link
+				color: #fff
+				border-color: #fff
+				&:hover
+					border-color: #57c8ff
+
+.pagination
+	display: flex
+	flex-flow: row wrap
+	padding-top: 15px
+	li 
+		list-style: none
+		a
+			display: block
+			color: #373737 
+			font-size: 21px
+			height: 50px
+			min-width: 50px
+			text-align: center
+			padding: 12px
+			margin-right: 20px
+			&.pagination-active,&:hover
+				color: #fff
+				background: #57c8ff
+
+/* -- content-page -- */
+.content
+	&-page
+		margin-bottom: 80px
+		h1
+			padding: 50px 0 50px
+			text-align: center
+	&-row
+		background-color: #fff
+		padding: 78px 100px 88px
+		background-image: url(../img/bg-bottom.svg)
+		background-repeat: no-repeat!important
+		background-position: bottom right!important
+		background-size: 370px
+	&-video
+		margin-bottom: 15px
+		font-size: 21px
+
+.text
+	margin-bottom: 25px
+	p 
+		margin-bottom: 20px
+
+.h2
+	margin-bottom: 36px
+.h3
+	margin-bottom: 25px
+
+.list 
+	padding-bottom: 43px
+	li 
+		margin-bottom: 10px
+		margin-left: 20px
+.img-content
+	margin-bottom: 25px
+
+.content-fotorama
+	.fotorama__thumb
+		height: 52px
+	.fotorama__nav--thumbs .fotorama__nav__frame
+		height: 52px
+	.fotorama__thumb-border
+		border-color: transparent
+		box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
+		height: 44px
+	.fotorama__fullscreen-icon
+		display: none!important
+	.fotorama__caption
+		top: -48px
+		right: 70px
+		left: auto
+		&__wrap
+			background: transparent!important
+			color: rgba(#222, .6)
+			font-size: 15px
+			padding: 0
+	.fotorama__thumb
+		height: 52px
+	.fotorama__nav--thumbs .fotorama__nav__frame
+		height: 52px
+	.fotorama__thumb-border
+		border-color: transparent
+		box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
+		height: 44px
+	.fotorama__arr
+		width: 70px
+		height: 75.4px
+		background-size: contain!important
+		background-repeat: no-repeat!important
+		transform: translate3d(0,0,0)!important
+		opacity: 1!important
+		z-index: 99
+		&--prev
+			background: url(../img/fot-arrow-left.svg)
+			left: 28px
+		&--next
+			background: url(../img/fot-arrow-right.svg)
+			right: 28px
+
+.thumb
+	display: flex
+	margin: 20px 0 40px
+	flex-flow: row wrap
+	&-img
+		width: 36%
+	&-text
+		width: 64%
+		padding: 0 0 0 20px
+		p 
+			padding-bottom: 20px
+
+.content-title
+	margin-bottom: 40px
+	font-size: 30px
+
+.documentation
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	&-column
+		width: 48.5%
+		margin-bottom: 30px
+		padding: 27px 20px 26px 134px
+		background-image: linear-gradient(to left, #90d7ff, #56c7ff)
+		min-height: 143px
+		position: relative
+		img
+			position: absolute
+			top: 27px
+			left: 28px
+			max-width: 69px
+		p 
+			max-width: 260px
+			color: #fff
+			font-size: 21px
+			margin-bottom: 20px
+		a 
+			position: absolute
+			bottom: 26px
+			left: 134px
+			color: #fff
+			border-bottom: 1px dashed #fff
+			&:hover
+				border-color: transparent
+
+video
+	width: 100%
+	margin-bottom: 30px
+
+.video-youtube
+	position: relative
+	padding-top: 30px
+	padding-bottom: 53.25%
+	border: 1px solid #ccc
+	height: 0
+	overflow: hidden
+	margin-bottom: 30px
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+/* -- building -- */
+.building
+	&-header__title
+		font-size: 75px
+
+.content
+	&-building
+		padding: 51px 0 118px
+		&__year
+			li 
+				a 
+					min-width: 210px
+		&__fotorama
+			margin-bottom: 70px
+			position: relative
+			&-col
+				position: absolute
+				right: 0
+				top: 17px
+				letter-spacing: -0.2px
+			&-title
+				max-width: 980px
+				margin: 0 auto 25px
+				font-size: 30px
+			.fotorama__fullscreen-icon
+				display: none!important
+			.fotorama__nav
+				max-width: 980px!important
+			.fotorama__stage__shaft
+				max-width: 980px
+				margin: 0 auto!important
+				img
+					width: 100%!important
+			.fotorama__stage__frame,.fotorama,.fotorama__stage
+				overflow: visible
+			.fotorama__caption
+				top: -48px
+				right: 70px
+				left: auto
+				&__wrap
+					background: transparent!important
+					color: rgba(#222, .6)
+					font-size: 15px
+					padding: 0
+			.fotorama__thumb
+				height: 52px
+			.fotorama__nav--thumbs .fotorama__nav__frame
+				height: 52px
+			.fotorama__thumb-border
+				border-color: transparent
+				box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
+				height: 44px
+			.fotorama__arr
+				width: 70px
+				height: 75.4px
+				background-size: contain!important
+				background-repeat: no-repeat!important
+				transform: translate3d(0,0,0)!important
+				opacity: 1!important
+				z-index: 99
+				&--prev
+					background: url(../img/fot-arrow-left.svg)
+				&--next
+					background: url(../img/fot-arrow-right.svg)
+		&__title
+			line-height: 1
+			font-size: 40px
+			margin-bottom: 64px
+			letter-spacing: -0.4px
+			text-align: center
+		&__row
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+		&__column
+			width: 48.8%
+			padding: 22px 32px 70px 31px
+			background-color: #fff 
+			position: relative
+			background-image: url(../img/bg-bottom.svg)
+			background-repeat: no-repeat
+			background-position: bottom right
+			&-title
+				font-size: 30px
+				letter-spacing: -0.2px
+				line-height: 1
+				margin-bottom: 10px
+			&-subtitle
+				margin-bottom: 35px
+				color: rgba(#222,.6)
+				font-size: 15px
+			ul
+				li
+					letter-spacing: -0.2px
+					font-size: 15px
+					margin-bottom: 12px
+					list-style: none
+					position: relative
+					padding-left: 25px
+					&::after
+						content: ''
+						position: absolute
+						top: 9px
+						left: 0
+						width: 3px
+						height: 3px
+						background: #222
+						margin: -1.5px 0 0 1.5px
+						border-radius: 50%
+
+.content-page.content-building
+	margin: 0!important
+
+@import "_media"

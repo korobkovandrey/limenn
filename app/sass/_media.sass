@@ -1,0 +1,781 @@
+@import "vars"
+
+@media only screen and (max-width : 1110px)
+	.info-wrap::after
+		right: -30px
+	.header-nav li a
+		padding: 2px 10px
+
+@media only screen and (max-width : 1080px)
+	.about,.info
+		&-wrap
+			max-width: 850px
+		&-descr
+			max-width: 577px
+			padding: 65px 50px
+	.info-wrap::after
+		right: -40px
+	.info-descr__links-first
+		margin: 0 0 15px
+	.footer
+		&-top
+			&__column
+				&-logo
+					margin-right: 20px
+					max-width: 115px
+				&-last
+					margin-left: 20px
+	.offers
+		padding-bottom: 90px
+		.wrapper
+			padding: 0 40px
+		&-title
+			padding: 43px 0 55px
+			color: #fff
+		&-row
+			display: flex
+			flex-flow: column wrap
+			margin: 0 auto
+			max-width: 700px
+			justify-content: space-between
+		&-column
+			margin: 0
+			&:nth-child(2)
+				align-self: flex-end
+				margin: -130px 0 0 0
+			&:nth-child(3)	
+				margin: -50px 0 0 0
+			&__img
+				right: 0
+		&-link__all
+			text-align: right
+			max-width: 700px
+			margin: -70px auto 0
+	.documentation-column p
+		font-size: 18px
+
+@media only screen and (max-width : 1025px)
+	.header
+		background: #fff
+		max-height: 70px
+		overflow: hidden!important
+		position: fixed
+		box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2)
+		&-logo
+			padding-top: 6px!important
+			&__1
+				display: none!important
+			&__2
+				display: block!important
+		&-music
+			padding-top: 23px
+			span
+				color: #222
+		&-nav
+			position: fixed
+			top: 68px
+			height: 100%
+			background: #fff 
+			z-index: 99
+			right: -270px
+			width: 270px
+			padding: 15px 20px 0
+			transition: .2s linear
+			&::after
+				content: ''
+				position: absolute
+				top: -2px
+				right: 0
+				width: 100%
+				height: 2px
+				box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .7)
+			ul
+				display: block
+			li 
+				a 
+					padding: 15px 0
+					color: #222
+			&__mob
+				width: 78px
+				height: 100%
+				position: absolute
+				top: 0
+				right: 0
+				z-index: 100
+				background: #fff
+				cursor: pointer
+				display: flex
+		&-phone
+			margin-right: 63px
+			z-index: 100
+			background-image: linear-gradient(to bottom, #90d7ff, #56c7ff)
+			&__flag
+				display: flex
+				flex-flow: row wrap
+				clip-path: none
+				max-width: 366px
+				min-width: 366px
+				width: 100%
+				max-height: 70px
+				border-radius: 0
+				padding: 13px 19px 16px 24px
+				justify-content: space-between
+				align-items: center
+				box-shadow: none
+				p 
+					display: none
+			&__link
+				font-size: 12px
+				margin-bottom: 4px
+				max-width: max-content
+				span
+					font-size: 19px
+			&__button
+				margin-bottom: 0
+		&-text__mob
+			display: block!important
+		&-open
+			.header-nav
+				right: 0
+	.menu-bar
+		display: block
+		margin: auto
+	.content-row
+		padding: 40px 15px 80px
+
+@media only screen and (max-width : 990px)
+	.footer
+		padding: 48px 0 38px
+		.wrapper
+			padding: 0 40px
+		&-social
+			position: static
+		&-top
+			&__row
+				flex-flow: row wrap
+			&__column
+				width: 100%
+				&-logo
+					width: 50%
+					margin: 0
+					max-width: 100%
+					padding: 0 0 35px
+					order: 1
+					max-height: 100%
+					img
+						max-width: 129px
+						margin-bottom: 20px
+				&-menu
+					order: 3
+					width: 100%
+				&-info
+					width: 50%
+					margin: 0
+					order: 2
+					padding: 0 0 35px
+				&-last
+					display: flex
+					flex-flow: column wrap
+					align-items: flex-end
+
+@media only screen and (max-width : 980px)
+	.advantages-column
+		width: 50%
+		height: 500px
+		&__descr
+			top: 200px
+
+@media only screen and (max-width : 900px)
+	.footer-bottom
+		flex-flow: row wrap
+		align-items: baseline
+		&__column
+			width: 50%
+			padding-top: 20px
+			img
+				margin-left: 20px
+	.content
+		&-building
+			padding: 51px 0 118px
+			&__year
+				li 
+					a 
+						min-width: 200px
+			&__title
+				font-size: 28px
+				margin-bottom: 40px
+			&__column
+				width: 48.8%
+				padding: 20px 15px 70px 15px
+				&-title
+					font-size: 24px
+				&-subtitle
+					margin-bottom: 25px
+
+@media only screen and (max-width : 880px)
+	.about,.info
+		&-wrap
+			max-width: 780px
+		&-descr
+			max-width: 504px
+	.news-article
+		width: 48.5%
+	.page-header
+		&__title
+			font-size: 80px
+			padding: 0 0 0 20px
+		ul
+			li a 
+				font-size: 13px
+				margin-right: 5px
+				padding: 3px 7px 3px
+	.documentation-column
+		width: 49%
+		margin-bottom: 10px
+		padding: 15px 15px 15px 80px
+		min-height: 110px
+		img
+			left: 15px
+			max-width: 50px
+			top: 20px
+		p 
+			font-size: 16px
+			margin-bottom: 15px
+		a 
+			position: static
+
+@media only screen and (max-width : 800px)
+	.section-header__title
+		font-size: 32px
+	.about
+		position: relative
+		&-wrap
+			&::before,&::after
+				display: none
+		&-descr
+			&::before
+				width: 287px
+				height: 332px
+				top: -80px
+				left: -130px
+				background: url(../img/sheet-1.png)
+			&::after
+				width: 342px
+				height: 296px
+				bottom: -95px
+				right: -180px
+				background: url(../img/people-1.png)
+	.info
+		&-wrap
+			&::before,&::after
+				display: none
+		&-descr
+			&::before
+				width: 276px
+				height: 260px
+				top: -10px
+				left: -130px
+				background: url(../img/info-crane-1.png)
+			&::after
+				width: 342px
+				height: 296px
+				bottom: -95px
+				right: -180px
+				background: url(../img/info-house-1.png)
+	.content
+		&-building
+			&__year
+				li 
+					a 
+						min-width: 180px
+			&__column
+				ul 
+					li 
+						font-size: 13px
+						margin-bottom: 10px
+
+@media only screen and (max-width : 780px)
+	.advantages-column
+		width: 50%
+		height: 500px
+		&__descr
+			top: 200px
+	.offers
+		.wrapper
+			padding: 0 20px
+	.mortgage
+		&-title
+			font-size: 35px
+			&__first
+				margin-bottom: 30px
+				font-size: 35px
+		&-link
+			margin-bottom: 55px
+		&-bottom
+			justify-content: baseline
+	.banner
+		&-descr
+			padding: 0 0 0 70px
+			max-width: 380px
+			&__title
+				font-size: 71px
+				span
+					margin-bottom: 20px
+			&__subtitle
+				font-size: 20px
+				margin-bottom: 40px
+	.header-music
+		display: none
+		audio
+			display: none
+	.fancybox-close-small
+		right: 10px
+		top: 10px
+	.content-news__month
+		margin-bottom: 20px
+		li a
+			font-size: 13px
+			padding: 3px 6px 3px 6px
+			margin: 0 5px 5px 0
+	.content-news__year
+		margin-bottom: 20px
+		li 
+			border: 1px solid #57c8ff!important
+			a
+				padding: 7px 5px 7px
+				min-width: 100px
+				font-size: 12px
+	.building
+		&-header__title
+			font-size: 50px!important
+	.map-wrap__info
+		position: static
+		margin: 20px auto
+		transform: translate(0,0)
+		width: 96%
+
+@media only screen and (max-width : 720px)
+	.content
+		&-building
+			padding: 40px 0 70px
+			&__year
+				li 
+					a 
+						min-width: 150px
+						font-size: 17px
+			&__column
+				width: 100%
+				padding: 22px 32px 70px 31px
+				margin-bottom: 30px
+				ul
+					li 
+						font-size: 15px
+						margin-bottom: 12px
+
+@media only screen and (max-width : 700px)
+	.offers
+		padding: 30px 0 40px
+		&-title
+			text-align: center
+			padding: 0 0 37px
+		&-row
+			display: block
+		&-column
+			margin: 0 auto 30px!important
+		&-link__all
+			margin: 0
+			text-align: center
+			padding-top: 30px
+	.footer
+		.wrapper
+			padding: 0 20px
+		&-top
+			&__column
+				&-nav
+					ul
+						width: 50%
+						&:nth-child(2)
+							order: 2
+						&:nth-child(3)
+							order: 1
+	.modal
+		&-call
+			&__title
+				font-size: 30px
+			&__text
+				font-size: 15px
+	blockquote
+		padding: 25px 40px 25px
+		font-size: 17px
+		margin-bottom: 30px
+		&::after,&::before
+			width: 20px
+			height: 24px
+		&::after
+			top: 10px
+			left: 10px
+		&::before
+			bottom: 10px
+			right: 10px
+	.content-building__fotorama .fotorama__arr
+		display: none!important
+
+@media only screen and (max-width : 580px)
+	.mortgage
+		padding: 20px 0 35px
+		&-title
+			font-size: 28px
+			&__first
+				display: none
+				&-mob
+					display: block
+					font-size: 20px
+					margin-bottom: 24px
+		&-link
+			margin-bottom: 35px
+			text-align: center
+			max-width: 280px
+			width: 100%
+		&-row
+			flex-flow: column wrap
+		&-column
+			&__last
+				order: -1
+				margin-bottom: 25px
+			&__cat
+				margin: 0 17px 0 0
+	.gallery-fotorama
+		.fotorama__nav-wrap
+			top: -100px
+		.fotorama
+			overflow: visible
+			padding-top: 100px
+		.fotorama__nav--thumbs .fotorama__nav__frame img
+			height: 71px!important
+			width: 102.6px!important
+		.fotorama__nav--thumbs .fotorama__nav__frame
+			min-height: 71px!important
+			width: 102.6px!important
+		.fotorama__thumb-border
+			height: 71px!important
+			display: none!important
+	.gallery-header
+		padding: 30px 0 10px
+	.header
+		max-height: 60px
+		&-row
+			padding: 0 20px
+			flex-flow: row nowrap
+		&-logo
+			margin-right: 60px
+			max-width: 95px
+			padding-top: 2px!important
+		&-phone
+			background: transparent
+			&__flag
+				display: block
+				padding: 17px 0 0 0
+				max-width: fit-content
+				min-width: auto
+				background: transparent
+			&__button
+				display: none
+		&-text__mob
+			display: none!important
+		&-nav
+			top: 58px
+			&::after
+				display: none
+			&__modal-btn
+				position: absolute
+				display: block
+				bottom: 58px
+				left: 0
+				width: 100%
+				height: 85px
+				background-image: linear-gradient(to bottom, #90d7ff, #56c7ff)
+				padding: 19px 17px 14px
+				.header-phone__button
+					display: block
+					max-width: 142px
+					margin-bottom: 7px
+				p 
+					font-size: 10px
+	.advantages-column__descr
+		top: 80px
+		&-title
+			&::after
+				opacity: 1
+		&-text
+			opacity: 1
+	.news-article
+		width: 100%
+		margin: 0 auto 20px
+		max-width: 370px
+	.page-header__title
+		padding-left: 0
+		font-size: 65px
+	.documentation
+		&-column
+			width: 100%
+			max-width: 480px
+			margin: 0 auto 15px
+			padding: 27px 20px 26px 134px
+			img
+				position: absolute
+				left: 28px
+				max-width: 69px
+			p 
+				font-size: 21px
+				margin-bottom: 20px
+	.content-page
+		.wrapper
+			padding: 0
+	.content-news
+		.wrapper
+			padding: 0 10px
+	.content-building
+		&__year
+			li a
+				min-width: 110px
+				font-size: 12px
+		&__title
+			font-size: 24px
+			margin-bottom: 30px
+		&__column
+			padding: 20px 15px 50px 15px
+
+
+@media only screen and (max-width : 540px)
+	.about
+		.wrapper
+			padding: 0
+	.advantages-column
+		height: 400px
+		&__descr
+			top: 80px
+	#map
+		height: 382px
+	.mortgage-bottom
+		max-width: 270px
+		&__img
+			padding: 0 10px 15px 0
+	.info
+		padding: 0
+		overflow: hidden
+		.wrapper
+			padding: 0
+		&-descr
+			border-radius: 0
+			padding: 30px 20px
+			max-width: 100%
+			&::before
+				top: 10px
+				left: -50px
+				z-index: -1
+			&::after
+				bottom: 20px
+				right: -125px
+				background: url(../img/house-2.png)
+				z-index: -1
+			&__links
+				a
+					padding: 16px 58px 16px 30px
+					max-width: 280px
+					width: 100%
+					text-align: center
+	.thumb
+		&-img
+			width: 100%
+		&-text
+			width: 100%
+			padding: 20px 0 0 0
+	.documentation-column
+		margin-bottom: 10px
+		padding: 15px 15px 15px 80px
+		min-height: 110px
+		img
+			left: 15px
+			max-width: 50px
+		p 
+			font-size: 16px
+			margin-bottom: 15px
+	.content-fotorama	.fotorama__arr
+		display: none!important
+
+@media only screen and (max-width : 490px)
+	.about
+		&-wrap
+			overflow: hidden
+		padding-bottom: 0
+		&-descr
+			padding: 41px 20px 30px
+			border-radius: 0
+			&::after
+				right: -40px
+				z-index: -1
+	.section-header
+		padding: 20px 0
+		&__title
+			font-size: 20px
+	.advantages-column
+		width: 100%
+	.contacts
+		.wrapper
+			padding: 0 20px
+		.btn-primary
+			padding: 16px 28px
+			text-align: center
+			width: 100%
+		padding: 28px 0 69px
+		&-header__text
+			font-size: 15px
+		&-descr__input-checkbox
+			max-width: 220px
+	.banner
+		&-descr
+			padding: 0 0 0 16px
+			max-width: 280px
+			&__title
+				font-size: 52px
+				span
+					margin-bottom: 18px
+					font-size: 14px
+			&__subtitle
+				font-size: 16px
+	.footer
+		padding: 30px 0 13px
+		&-top
+			&__link
+				max-width: 280px
+				width: 100%
+				img
+					right: 40px
+			&__column
+				width: 100%
+				text-align: center
+				padding-bottom: 15px
+				&-menu
+					display: none
+				&-last
+					align-items: center
+					margin: 0
+		&-social
+			margin: 0 auto
+			max-width: 260px
+			justify-content: space-between
+			li 
+				margin: 0
+		&-bottom
+			&__column
+				width: 100%
+				padding-bottom: 17px
+				img
+					margin: 0
+	.fancybox-slide>*
+		padding: 0
+	.modal
+		&-wrap
+			padding: 0 5px
+		&-call
+			&__title
+				font-size: 23px
+		.contacts-descr__link button
+			font-size: 12px
+			padding: 12px 10px
+	.building
+		&-header__title
+			font-size: 40px!important
+	.content-building
+		&__title
+			font-size: 20px
+		&__column
+			padding: 20px 10px 50px 10px
+			ul
+				li 
+					font-size: 13px
+					margin-bottom: 8px
+					padding-left: 15px
+	.content-building
+		&__year
+			padding: 0 10px
+			li
+				border: 1px solid #57c8ff!important
+		&__month
+			padding: 0 10px
+		&__fotorama
+			margin-bottom: 35px
+			&-title
+				font-size: 20px
+				margin: 0 0 15px 10px
+			&-col
+				display: none!important
+			.fotorama__caption
+				right: 10px
+				font-size: 14px
+				top: -40px
+		.wrapper
+			padding: 0
+
+@media only screen and (max-width : 400px)
+	.offers
+		&-column
+			max-width: 280px
+			&__descr
+				max-width: 230px
+				min-height: 255px
+				padding: 87px 43px 85px 22px
+			&__title
+				font-size: 16px
+				max-width: 160px
+			&__text
+				font-size: 12px
+				max-width: 133px
+			&__link
+				width: 82.5px
+				height: 91.8px
+				bottom: -13px
+				right: 65.8px
+			&__img
+				max-width: 105px
+		&-link__all
+			margin: 0
+			text-align: center
+			padding-top: 30px
+			a
+				display: block
+	.info-descr__column-last
+		display: none
+	.header
+		&-logo
+			margin-right: 20px
+		&-nav__mob
+			max-width: 52px
+		&-phone
+			margin-right: 35px
+	.pagination li a
+		min-width: 35px
+		padding: 8px
+		height: 35px
+		margin-right: 6px
+		font-size: 16px
+	.content-news__year li a
+		min-width: 80px
+		font-size: 11px
+	.building
+		&-header__title
+			font-size: 30px!important
+	.map-wrap__info
+		padding: 100px 30px
+		height: 420px
+		&-title
+			font-size: 20px
+			margin-bottom: 10px
+
+@media only screen and (max-width : 350px)
+	.map-wrap__info
+		padding: 100px 30px
+		height: 380px
+		&-text
+			font-size: 13px
+			margin-bottom: 10px

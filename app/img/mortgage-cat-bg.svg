@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="110px" height="123px" viewBox="0 0 110 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Polygon3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-1280" transform="translate(-993.000000, -4198.000000)" fill="#FFFFFF">
+            <g id="Group-28" transform="translate(0.000000, 4155.000000)">
+                <g id="Group-20-Copy">
+                    <g id="Group-14">
+                        <g id="Group-26" transform="translate(993.000000, 43.000000)">
+                            <path d="M62.5,2.64183389 L102.5,25.7358447 L102.5,25.7358447 C107.141016,28.4153366 110,33.3672419 110,38.7262257 L110,84.9142473 L110,84.9142473 C110,90.2732311 107.141016,95.2251364 102.5,97.9046283 L62.5,120.998639 L62.5,120.998639 C57.8589838,123.678131 52.1410162,123.678131 47.5,120.998639 L7.5,97.9046283 L7.5,97.9046283 C2.85898385,95.2251364 3.37507799e-14,90.2732311 2.84217094e-14,84.9142473 L0,38.7262257 L-3.55271368e-15,38.7262257 C-7.10542736e-15,33.3672419 2.85898385,28.4153366 7.5,25.7358447 L47.5,2.64183389 L47.5,2.64183389 C52.1410162,-0.0376580336 57.8589838,-0.0376580336 62.5,2.64183389 Z" id="Polygon3"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

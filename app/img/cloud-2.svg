@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="357" height="286" viewBox="0 0 357 286">
+    <defs>
+        <filter id="a" width="192.6%" height="235%" x="-46.3%" y="-67.5%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="31.948"/>
+        </filter>
+    </defs>
+    <path fill="#FFF" fill-rule="evenodd" d="M561.57 559.919c32.86 0 22.153 41.051 45.416 33.046 28.95-9.962 11.802-29.007 11.802-45.637 0-18.201 28.47-29.634-5.323-39.488-21.896-6.385-33.954-55.84-62.953-55.84-21.023 0-33.467 45.47-51.16 48.99-11.717 2.33-44.431-17.803-54.025-15.884-26.743 5.347-22.002 32.917-22.002 48.7 0 13.83 25.116 16.524 46.05 26.113 24.463 11.204 52.451 0 92.194 0z" filter="url(#a)" opacity=".6" transform="translate(-346 -379)"/>
+</svg>
