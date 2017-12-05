@@ -10,9 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
-    ftp = require('vinyl-ftp'),
-    notify = require("gulp-notify"),
-    rsync = require('gulp-rsync');
+    notify = require("gulp-notify");
 
 // Скрипты проекта
 
@@ -37,17 +35,6 @@ gulp.task('js', ['common-js'], function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('browser-sync', function () {
-    browserSync({
-        server: {
-            baseDir: 'app'
-        },
-        notify: false,
-        // tunnel: true,
-        // tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
-    });
-});
-
 gulp.task('sass', function () {
     return gulp.src('app/sass/**/*.sass')
         .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
@@ -56,12 +43,6 @@ gulp.task('sass', function () {
         .pipe(cleanCSS()) // Опционально, закомментировать при отладке
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
-    gulp.watch('app/sass/**/*.sass', ['sass']);
-    gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-    gulp.watch('app/*.html', browserSync.reload);
 });
 
 gulp.task('imagemin', function () {
@@ -74,7 +55,6 @@ gulp.task('build', ['imagemin', 'sass', 'js'], function () {
 
     var buildFiles = gulp.src([
         'app/*.html',
-        'app/.htaccess',
         'app/ht.access',
     ]).pipe(gulp.dest('../assets/templates/garmonia'));
 
@@ -92,42 +72,6 @@ gulp.task('build', ['imagemin', 'sass', 'js'], function () {
 
 });
 
-gulp.task('deploy', function () {
-
-    var conn = ftp.create({
-        host: 'hostname.com',
-        user: 'username',
-        password: 'userpassword',
-        parallel: 10,
-        log: gutil.log
-    });
-
-    var globs = [
-        'dist/**',
-        'dist/.htaccess',
-    ];
-    return gulp.src(globs, {buffer: false})
-        .pipe(conn.dest('/path/to/folder/on/server'));
-
-});
-
-gulp.task('rsync', function () {
-    return gulp.src('dist/**')
-        .pipe(rsync({
-            root: 'dist/',
-            hostname: 'username@yousite.com',
-            destination: 'yousite/public_html/',
-            archive: true,
-            silent: false,
-            compress: true
-        }));
-});
-
-gulp.task('removedist', function () {
-    return del.sync('../assets/templates/dist');
-});
 gulp.task('clearcache', function () {
     return cache.clearAll();
 });
-
-gulp.task('default', ['watch']);
