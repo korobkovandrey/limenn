@@ -726,7 +726,6 @@ table
 			padding: 20px 23px 21px 72px
 			background-position: bottom right!important
 			background-repeat: no-repeat!important
-			background: url(../img/stock.png)
 			&-title
 				font-family: $AvertaDemoPE-Regular
 				font-size: 21px
@@ -1856,10 +1855,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 			left: 35px
 			bottom: 35px
 			z-index: 10
-			&:hover
-				color: #fff 
-				background: #57c8ff
-				border-color: #57c8ff
 		&.news-article__img
 			&::after
 				content: ''
@@ -1876,6 +1871,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 				border-color: #fff
 				&:hover
 					border-color: #57c8ff
+		&:hover .news-article__link
+			color: #fff 
+			background: #57c8ff
+			border-color: #57c8ff
 
 .pagination
 	display: flex
@@ -1998,7 +1997,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 	&-column
 		width: 48.5%
 		margin-bottom: 30px
-		padding: 27px 20px 26px 134px
+		padding: 27px 15px 26px 134px
 		background-image: linear-gradient(to left, #90d7ff, #56c7ff)
 		min-height: 143px
 		position: relative
@@ -2008,9 +2007,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 			left: 28px
 			max-width: 69px
 		p 
-			max-width: 260px
 			color: #fff
-			font-size: 21px
+			font-size: 17px
 			margin-bottom: 20px
 		a 
 			position: absolute
