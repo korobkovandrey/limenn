@@ -14,6 +14,8 @@ var gulp = require('gulp'),
 
 // Скрипты проекта
 
+var dist = '../assets/templates/garmonia';
+
 gulp.task('common-js', function () {
     return gulp.src([
         'app/js/common.js',
@@ -48,7 +50,7 @@ gulp.task('sass', function () {
 gulp.task('imagemin', function () {
     return gulp.src('app/img/**/*')
         .pipe(cache(imagemin()))
-        .pipe(gulp.dest('../assets/templates/garmonia/img'));
+        .pipe(gulp.dest(dist + '/img'));
 });
 
 gulp.task('build', ['imagemin', 'sass', 'js'], function () {
@@ -56,19 +58,19 @@ gulp.task('build', ['imagemin', 'sass', 'js'], function () {
     var buildFiles = gulp.src([
         'app/*.html',
         'app/ht.access',
-    ]).pipe(gulp.dest('../assets/templates/garmonia'));
+    ]).pipe(gulp.dest(dist));
 
     var buildCss = gulp.src([
         'app/css/main.min.css',
-    ]).pipe(gulp.dest('../assets/templates/garmonia/css'));
+    ]).pipe(gulp.dest(dist + '/css'));
 
     var buildJs = gulp.src([
         'app/js/scripts.min.js',
-    ]).pipe(gulp.dest('../assets/templates/garmonia/js'));
+    ]).pipe(gulp.dest(dist + '/js'));
 
     var buildFonts = gulp.src([
         'app/fonts/**/*',
-    ]).pipe(gulp.dest('../assets/templates/garmonia/fonts'));
+    ]).pipe(gulp.dest(dist + '/fonts'));
 
 });
 
