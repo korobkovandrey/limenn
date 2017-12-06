@@ -44,27 +44,33 @@
                 cookie_music_status = $.cookie(cookie_name);
 
             function musicStatus() {
-                if (cookie_music_status === 1) {
-                    return true;
+                if(cookie_music_status === undefined){
+                    return !($window.width() < 781);
                 }
-                if (cookie_music_status === 0) {
-                    return false;
-                }
-                /* cookie_music_status === undefined */
-                return !($window.width() < 781);
+                cookie_music_status = parseInt(cookie_music_status);
+                return cookie_music_status;
+            }
+
+            function playMusic() {
+                music.play();
+                $header_music.find('span').text('Музыка включена');
+                $('.animate-spinner-block__item').css('animation-name', 'spinner-block-top');
+            }
+            function pauseMusic() {
+                music.pause();
+                $header_music.find('span').text('Музыка выключена');
+                $('.animate-spinner-block__item').css('animation-name', 'spinner-block-top-none');
             }
 
             if (musicStatus()){
-                music.play();
+                playMusic();
             }else{
-                music.pause();
+                pauseMusic();
             }
 
             $header_music.on('click', function () {
                 if (music.paused) {
-                    music.play();
-                    $header_music.find('span').text('Музыка включена');
-                    $('.animate-spinner-block__item').css('animation-name', 'spinner-block-top');
+                    playMusic();
                     $.cookie(cookie_name, 1, {
                         expires: 2,
                         path: '/',
@@ -72,9 +78,7 @@
                     });
                 }
                 else {
-                    music.pause();
-                    $header_music.find('span').text('Музыка выключена');
-                    $('.animate-spinner-block__item').css('animation-name', 'spinner-block-top-none');
+                    pauseMusic();
                     $.cookie(cookie_name, 0, {
                         expires: 2,
                         path: '/',
@@ -85,7 +89,7 @@
 
             $window.on('resize', function () {
                 if (!musicStatus()){
-                    music.pause();
+                    pauseMusic();
                 }
                 //posCol();
             });
