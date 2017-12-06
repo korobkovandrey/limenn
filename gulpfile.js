@@ -29,6 +29,7 @@ gulp.task('js', ['common-js'], function () {
     return gulp.src([
         'app/libs/fotorama/fotorama.js',
         'app/libs/fancybox/fancybox.js',
+        'app/libs/jquery.cookie.js',
         'app/js/common.min.js', // Всегда в конце
     ])
         .pipe(concat('scripts.min.js'))
