@@ -132,22 +132,22 @@
         });
 
 
-        function deleteC(name, time) {
+        function deleteC($element, time) {
             setTimeout(function () {
-                $('.' + name).addClass('div-remove');
+                $($element).addClass('div-remove');
             }, time);
         }
 
-        deleteC('banner-cloud__1', 54000);
-        deleteC('banner-cloud__2', 44000);
-        deleteC('banner-cloud__3', 54000);
-        deleteC('banner-cloud__4', 24000);
-        deleteC('banner-cloud__5', 34000);
-        deleteC('banner-cloud__6', 10000);
-        deleteC('banner-cloud__7', 10000);
-        deleteC('banner-cloud__8', 34000);
-        deleteC('banner-cloud__9', 24000);
-        deleteC('banner-cloud__10', 50000);
+        deleteC('.banner-cloud__1', 54000);
+        deleteC('.banner-cloud__2', 44000);
+        deleteC('.banner-cloud__3', 54000);
+        deleteC('.banner-cloud__4', 24000);
+        deleteC('.banner-cloud__5', 34000);
+        deleteC('.banner-cloud__6', 10000);
+        deleteC('.banner-cloud__7', 10000);
+        deleteC('.banner-cloud__8', 34000);
+        deleteC('.banner-cloud__9', 24000);
+        deleteC('.banner-cloud__10', 50000);
 
         /*var fotoramaDiv = $('.building-fotorama').fotorama(),
          fotorama = fotoramaDiv.data('fotorama'),
