@@ -51,7 +51,7 @@
 			text-align: right
 			max-width: 700px
 			margin: -70px auto 0
-	.documentation-column p
+	.content-page .documentation div p
 		font-size: 18px
 
 @media only screen and (max-width : 1025px)
@@ -229,20 +229,23 @@
 				font-size: 13px
 				margin-right: 5px
 				padding: 3px 7px 3px
-	.documentation-column
-		width: 49%
-		margin-bottom: 10px
-		padding: 15px 15px 15px 80px
-		min-height: 110px
-		img
-			left: 15px
-			max-width: 50px
-			top: 20px
-		p 
-			font-size: 16px
-			margin-bottom: 15px
-		a 
-			position: static
+	.content-page
+		.documentation div
+			width: 49%
+			margin-bottom: 10px
+			padding: 15px 15px 15px 80px
+			min-height: 110px
+			img
+				left: 15px
+				max-width: 50px
+				top: 20px
+			p 
+				font-size: 16px
+				margin-bottom: 15px
+			a 
+				position: static
+		.partner
+			padding: 25px 15px 30px
 
 @media only screen and (max-width : 800px)
 	.section-header__title
@@ -293,6 +296,19 @@
 					li 
 						font-size: 13px
 						margin-bottom: 10px
+	.content-page
+		.partner
+			padding: 25px 15px 30px
+			flex-flow: row wrap
+			div
+				max-width: 100%!important
+				&:nth-child(1),&:nth-child(3)
+					width: 40%
+				&:nth-child(2),&:nth-child(4)
+					width: 60%
+				&:nth-child(1),&:nth-child(2)
+					margin-bottom: 20px
+					
 
 @media only screen and (max-width : 780px)
 	.advantages-column
@@ -331,7 +347,7 @@
 	.fancybox-close-small
 		right: 10px
 		top: 10px
-	.content-news__month
+	.content-news__month, .content-building__month
 		margin-bottom: 20px
 		li a
 			font-size: 13px
@@ -353,6 +369,15 @@
 		margin: 20px auto
 		transform: translate(0,0)
 		width: 96%
+	.banner-cloud
+		display: none!important
+		animation: none!important
+	.content-page
+		h1
+			font-size: 30px
+	.infrastructure-ico:hover + div
+		transform: translate(-50%,20px)
+		opacity: 0
 
 @media only screen and (max-width : 720px)
 	.content
@@ -419,19 +444,20 @@
 			right: 10px
 	.content-building__fotorama .fotorama__arr
 		display: none!important
-	.documentation
-		&-column
-			width: 100%
-			max-width: 480px
-			margin: 0 auto 15px
-			padding: 27px 20px 26px 134px
-			img
-				position: absolute
-				left: 28px
-				max-width: 69px
-			p 
-				font-size: 17px
-				margin-bottom: 20px
+	.content-page
+		.documentation
+			div
+				width: 100%
+				max-width: 480px
+				margin: 0 auto 15px
+				padding: 27px 20px 26px 134px
+				img
+					position: absolute
+					left: 28px
+					max-width: 69px
+				p 
+					font-size: 17px
+					margin-bottom: 20px
 
 @media only screen and (max-width : 580px)
 	.mortgage
@@ -482,7 +508,12 @@
 		&-logo
 			margin-right: 60px
 			max-width: 95px
-			padding-top: 2px!important
+			padding-top: 6px!important
+			&__2
+				display: none
+				max-width: 85px
+			&__1
+				max-width: 70px
 		&-phone
 			background: transparent
 			&__flag
@@ -531,19 +562,37 @@
 	.content-page
 		.wrapper
 			padding: 0
+		h1
+			font-size: 25px
+			padding: 25px 10px
+		h2
+			font-size: 22px
+			margin-bottom: 20px
+		h3
+			font-size: 18px
+		p,li
+			font-size: 14px
+			margin-bottom: 10px
 	.content-news
 		.wrapper
 			padding: 0 10px
 	.content-building
 		&__year
-			li a
-				min-width: 110px
-				font-size: 12px
+			li 
+				width: 33.333%
+				a
+					width: 33.333%
+					min-width: 100%
+					font-size: 12px
 		&__title
 			font-size: 24px
 			margin-bottom: 30px
 		&__column
 			padding: 20px 15px 50px 15px
+	.content-news__year
+		li
+			width: 33.333%
+			margin-left: -1px
 
 
 @media only screen and (max-width : 540px)
@@ -584,24 +633,34 @@
 					max-width: 280px
 					width: 100%
 					text-align: center
-	.thumb
-		&-img
-			width: 100%
-		&-text
-			width: 100%
-			padding: 20px 0 0 0
-	.documentation-column
-		margin-bottom: 10px
-		padding: 15px 15px 15px 80px
-		min-height: 110px
-		img
-			left: 15px
-			max-width: 50px
-		p 
-			font-size: 16px
-			margin-bottom: 15px
-	.content-fotorama	.fotorama__arr
-		display: none!important
+	.content-page
+		.thumb
+			&-img
+				width: 100%
+			&-text
+				width: 100%
+				padding: 20px 0 0 0
+		.documentation div
+			margin-bottom: 10px
+			padding: 15px 15px 15px 80px
+			min-height: 110px
+			img
+				left: 15px
+				max-width: 50px
+			p 
+				font-size: 16px
+				margin-bottom: 15px
+		.content-fotorama	.fotorama__arr
+			display: none!important
+		.partner
+			div
+				max-width: 100%!important
+				width: 50%!important
+				&:nth-child(3),&:nth-child(4) 
+					p:nth-child(2)
+						font-size: 30px
+						span
+							font-size: 22px
 
 @media only screen and (max-width : 490px)
 	.about
@@ -699,8 +758,6 @@
 	.content-building
 		&__year
 			padding: 0 10px
-			li
-				border: 1px solid #57c8ff!important
 		&__month
 			padding: 0 10px
 		&__fotorama
@@ -716,6 +773,18 @@
 				top: -40px
 		.wrapper
 			padding: 0
+	.content-page
+		.wrapper
+			padding: 0
+		h1
+			font-size: 20px
+		h2
+			font-size: 18px
+			margin-bottom: 15px
+		h3
+			font-size: 16px
+		.partner
+			padding: 20px 10px 25px
 
 @media only screen and (max-width : 400px)
 	.offers
@@ -759,9 +828,6 @@
 		height: 35px
 		margin-right: 6px
 		font-size: 16px
-	.content-news__year li a
-		min-width: 80px
-		font-size: 11px
 	.building
 		&-header__title
 			font-size: 30px!important
@@ -771,6 +837,18 @@
 		&-title
 			font-size: 20px
 			margin-bottom: 10px
+	.content-page
+		.partner
+			padding: 20px 10px 25px
+			div
+				&:nth-child(1),&:nth-child(2)
+					width: 100%!important
+				&:nth-child(1) 
+					img
+						display: block
+						margin-bottom: 10px
+					a
+						position: static
 
 @media only screen and (max-width : 350px)
 	.map-wrap__info
@@ -779,3 +857,5 @@
 		&-text
 			font-size: 13px
 			margin-bottom: 10px
+	.content-building__year li a 
+		font-size: 11px

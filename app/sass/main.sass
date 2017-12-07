@@ -43,7 +43,6 @@ body
 	font-family: $AvertaDemoPE-Regular
 	overflow-x: hidden
 	opacity: 1
-	font-size: 15px
 	color: #222222
 	background-image: url(../img/content-bg.png)
 	background-repeat: repeat
@@ -55,14 +54,6 @@ h1,h2,h3,h4,h5,h6
 	font-family: $AvertaDemoPE-Regular
 	font-weight: normal
 
-h1
-	font-size: 40px
-
-h2
-	font-size: 30px
-
-h3
-	font-size: 21px
 img
 	max-width: 100%
 	height: auto
@@ -290,6 +281,9 @@ table
 		padding-top: 38px
 		&__2
 			display: none
+			max-width: 115px
+		&__1
+			max-width: 90px
 	&-nav
 		padding-top: 38px
 		ul
@@ -335,7 +329,7 @@ table
 		&__link
 			color: #2a2a2a
 			font-size: 15px
-			letter-spacing: -0.2px;
+			letter-spacing: -0.2px
 			margin-bottom: 10px
 			display: block
 			border-bottom: 1px dashed #2a2a2a
@@ -393,7 +387,6 @@ table
 	margin-right: 18px
 
 .animate-spinner-block__item
-  height: 15px
   animation: spinner-block-top 1.5s infinite
   display: inline-block
   width: 4px
@@ -445,7 +438,6 @@ table
 
 .menu-bar
 	width: 18px
-	position: relative
 	height: 12px
 	z-index: 1000
 	cursor: pointer
@@ -481,7 +473,6 @@ table
 	position: relative
 	background-size: cover!important
 	background: url(../img/banner-bg.jpg)
-	position: relative
 	&::after
 		content: ''
 		position: absolute
@@ -710,7 +701,7 @@ table
 					content: ''
 					position: absolute
 					bottom: 0
-					left: 0%
+					left: 0
 					background-size: contain!important
 					background: url(../img/star.svg)
 					width: 18px
@@ -837,7 +828,7 @@ table
 		left: 15%
 	100%
 		left: -15%
-		top: 0%
+		top: 0
 
 @keyframes cloud8
 	0%
@@ -853,7 +844,7 @@ table
 		left: 50%
 	100%
 		left: -15%
-		top: 0%
+		top: 0
 
 @keyframes cloud10
 	0%
@@ -901,7 +892,7 @@ table
 		left: -15%
 	100%
 		left: -5%
-		top: 0%
+		top: 0
 
 @keyframes cloud16
 	0%
@@ -1189,10 +1180,11 @@ table
 			background-repeat: no-repeat!important
 			img
 				width: 27px
+				transition: .2s linear
 				margin: auto
 		&:hover
 			.offers-column__link img
-				animation: .7s tremor linear infinite
+				transform: translate(15px,0) scale(1.1)
 	&-link__all
 		text-align: center
 		a 
@@ -1207,18 +1199,6 @@ table
 			&:hover
 				background-image: linear-gradient(to right, #ffd734, #fff45e)
 				transform: translate(0, -7px)
-
-@keyframes tremor
-	0%, 25%
-		left: 1px
-		top: 1px
-		transform: translateX(5%)
-		opacity: 0.6
-	50%, 100%
-		left: -1px
-		top: -1px
-		transform: translateX(-3%)
-		opacity: 1
 
 /* -- info -- */
 .info
@@ -1255,7 +1235,6 @@ table
 		box-shadow: -70px 70px 53px 0 rgba(0, 0, 0, 0.05)
 		position: relative
 		z-index: 2
-		position: relative
 		&::after,&::before
 			content: ''
 			position: absolute
@@ -1266,7 +1245,7 @@ table
 			width: 137px
 			height: 231.1px
 			bottom: -21px
-			right: 0px
+			right: 0
 			background: url(../img/info-house-2.png)
 		&::before
 			width: 153px
@@ -1452,7 +1431,7 @@ table
 		height: 114px!important
 		border-color: transparent
 		border-bottom: 1px solid transparent!important
-		box-shadow: 0px 0px 11px 2px rgba(254,205,0,.9)
+		box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
 
 .content-fotorama
 	margin-bottom: 40px
@@ -1521,7 +1500,7 @@ table
 			margin: 0 auto
 			max-width: 492px
 			letter-spacing: -0.1px
-			font-weighnt: 400
+			font-weight: 400
 			color: #fff
 	&-descr
 		max-width: 424px
@@ -1912,112 +1891,175 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 	&-video
 		margin-bottom: 15px
 		font-size: 21px
-
-.text
-	margin-bottom: 25px
-	p 
-		margin-bottom: 20px
-
-.h2
-	margin-bottom: 36px
-.h3
-	margin-bottom: 25px
-
-.list 
-	padding-bottom: 43px
-	li 
-		margin-bottom: 10px
-		margin-left: 20px
-.img-content
-	margin-bottom: 25px
-
-.content-fotorama
-	.fotorama__thumb
-		height: 52px
-	.fotorama__nav--thumbs .fotorama__nav__frame
-		height: 52px
-	.fotorama__thumb-border
-		border-color: transparent
-		box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
-		height: 44px
-	.fotorama__fullscreen-icon
-		display: none!important
-	.fotorama__caption
-		top: -48px
-		right: 70px
-		left: auto
-		&__wrap
-			background: transparent!important
-			color: rgba(#222, .6)
-			font-size: 15px
-			padding: 0
-	.fotorama__thumb
-		height: 52px
-	.fotorama__nav--thumbs .fotorama__nav__frame
-		height: 52px
-	.fotorama__thumb-border
-		border-color: transparent
-		box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
-		height: 44px
-	.fotorama__arr
-		width: 70px
-		height: 75.4px
-		background-size: contain!important
-		background-repeat: no-repeat!important
-		transform: translate3d(0,0,0)!important
-		opacity: 1!important
-		z-index: 99
-		&--prev
-			background: url(../img/fot-arrow-left.svg)
-			left: 28px
-		&--next
-			background: url(../img/fot-arrow-right.svg)
-			right: 28px
-
-.thumb
-	display: flex
-	margin: 20px 0 40px
-	flex-flow: row wrap
-	&-img
-		width: 36%
-	&-text
-		width: 64%
-		padding: 0 0 0 20px
+	&-page
 		p 
-			padding-bottom: 20px
-
-.content-title
-	margin-bottom: 40px
-	font-size: 30px
-
-.documentation
-	display: flex
-	flex-flow: row wrap
-	justify-content: space-between
-	&-column
-		width: 48.5%
-		margin-bottom: 30px
-		padding: 27px 15px 26px 134px
-		background-image: linear-gradient(to left, #90d7ff, #56c7ff)
-		min-height: 143px
-		position: relative
-		img
-			position: absolute
-			top: 27px
-			left: 28px
-			max-width: 69px
-		p 
-			color: #fff
-			font-size: 17px
 			margin-bottom: 20px
-		a 
-			position: absolute
-			bottom: 26px
-			left: 134px
-			color: #fff
-			border-bottom: 1px dashed #fff
+		h1
+			font-size: 40px
+		h2
+			font-size: 30px
+			margin-bottom: 36px
+		h3
+			font-size: 21px
+			margin-bottom: 25px
+		ul,ol 
+			padding-bottom: 43px
+			li 
+				margin: 0 0 10px 20px
+				padding-left: 10px
+		img
+			margin-bottom: 25px
+		.fotorama__thumb
+			height: 52px
+		.fotorama__nav--thumbs .fotorama__nav__frame
+			height: 52px
+		.fotorama__thumb-border
+			border-color: transparent
+			box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
+			height: 44px
+		.fotorama__caption
+			top: -48px
+			right: 70px
+			left: auto
+			&__wrap
+				background: transparent!important
+				color: rgba(#222, .6)
+				font-size: 15px
+				padding: 0
+		.fotorama__thumb
+			height: 52px
+		.fotorama__nav--thumbs .fotorama__nav__frame
+			height: 52px
+		.fotorama__thumb-border
+			border-color: transparent
+			box-shadow: 0 0 11px 2px rgba(254,205,0,.9)
+			height: 44px
+		.fotorama__arr
+			width: 70px
+			height: 75.4px
+			background-size: contain!important
+			background-repeat: no-repeat!important
+			transform: translate3d(0,0,0)!important
+			opacity: 1!important
+			z-index: 99
 			&:hover
-				border-color: transparent
+				transform: scale(.9)!important
+			&--prev
+				background: url(../img/fot-arrow-left.svg)
+				left: 28px
+			&--next
+				background: url(../img/fot-arrow-right.svg)
+				right: 28px
+		.thumb
+			display: flex
+			margin: 20px 0 40px
+			flex-flow: row wrap
+			&-img
+				width: 36%
+			&-text
+				width: 64%
+				padding: 0 0 0 20px
+				p 
+					padding-bottom: 20px
+		.content-title
+			margin-bottom: 40px
+			font-size: 30px
+		.documentation
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			div
+				width: 48.5%
+				margin-bottom: 30px
+				padding: 27px 15px 26px 134px
+				background-image: linear-gradient(to left, #90d7ff, #56c7ff)
+				min-height: 143px
+				position: relative
+				img
+					position: absolute
+					top: 27px
+					left: 28px
+					max-width: 69px
+				p 
+					color: #fff
+					font-size: 17px
+					margin-bottom: 20px
+				a 
+					position: absolute
+					bottom: 26px
+					left: 134px
+					color: #fff
+					border-bottom: 1px dashed #fff
+					&:hover
+						border-color: transparent
+		.partner
+			padding: 28px 38px 30px
+			margin-bottom: 20px
+			background: #faf8f5
+			display: flex
+			flex-flow: row nowrap
+			justify-content: space-between
+			p 
+				margin-bottom: 0
+			ul
+				margin: 0
+				padding: 0
+				li 
+					margin: 0
+					padding: 0
+					list-style: none
+					font-size: 14px
+			div
+				width: 100%
+				img
+					align-self: baseline
+					margin-bottom: 5px
+				a 
+					font-size: 15px
+					color: #4496d2
+					border-bottom: 1px dashed #4496d2
+					&:hover
+						color: #222
+						border-color: #222
+				&:nth-child(1)
+					max-width: 150px
+					position: relative
+					a 
+						position: absolute
+						bottom: 0
+						left: 0
+				&:nth-child(2)
+					max-width: 330px
+					padding-right: 10px
+					p:nth-child(2)
+						font-size: 14px
+				&:nth-child(3)
+					max-width: 210px
+					p:nth-child(2)
+						font-size: 54px
+						color: #56c7ff
+						letter-spacing: -0.8px
+						span
+							font-size: 32px
+							margin-right: 5px
+				&:nth-child(4)
+					max-width: 165px
+					p:nth-child(2)
+						font-size: 54px
+						color: #56c7ff
+						letter-spacing: -0.8px
+						span
+							font-size: 32px
+							margin-left: 8px
+				p 
+					&:nth-child(1)
+						min-height: 40px
+						color: rgba(0,0,0,.5)
+						font-size: 15px
+						max-width: 115px
+						letter-spacing: -0.2px
+
+				
 
 video
 	width: 100%
@@ -2050,6 +2092,10 @@ video
 			li 
 				a 
 					min-width: 210px
+		&__head
+			position: relative
+			max-width: 980px
+			margin: 0 auto
 		&__fotorama
 			margin-bottom: 70px
 			position: relative
@@ -2059,11 +2105,8 @@ video
 				top: 17px
 				letter-spacing: -0.2px
 			&-title
-				max-width: 980px
-				margin: 0 auto 25px
+				margin-bottom: 25px
 				font-size: 30px
-			.fotorama__fullscreen-icon
-				display: none!important
 			.fotorama__nav
 				max-width: 980px!important
 			.fotorama__stage__shaft
@@ -2098,6 +2141,8 @@ video
 				transform: translate3d(0,0,0)!important
 				opacity: 1!important
 				z-index: 99
+				&:hover
+					transform: scale(.9)!important
 				&--prev
 					background: url(../img/fot-arrow-left.svg)
 				&--next
@@ -2150,5 +2195,159 @@ video
 
 .content-page.content-building
 	margin: 0!important
+
+/* -- infrastructure -- */
+.infrastructure
+	padding-top: 50px
+	&-title
+		font-size: 40px
+		text-align: center
+		letter-spacing: -0.4px
+		margin-bottom: 45px
+	&-text
+		margin-bottom: 20px
+		color: #212121
+	&-menu
+		padding: 40px 0 30px
+		display: flex
+		flex-flow: row nowrap
+		justify-content: center
+		li
+			padding: 12px 13px 13px
+			margin: 0
+			font-size: 16px
+			list-style: none
+			border: solid 2px #8fd7ff
+			transition: .2s linear
+			width: 210px
+			text-align: center
+			cursor: pointer
+			&:hover,&.infrastructure-menu__active
+				background: #8fd7ff
+				color: #fff
+	&-filter
+		padding: 20px 0 1px
+		background: rgba(#ffffff,.7)
+		ul
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			li 
+				display: flex
+				flex-flow: row nowrap
+				align-items: center
+				list-style: none
+				cursor: pointer
+				margin-bottom: 19px
+				width: 20%
+				div
+					height: 22px
+					width: 22px
+					border: solid 1px #c5c5c5
+					position: relative
+					&::after
+						content: ''
+						position: absolute
+						top: 50%
+						left: 50%
+						height: 14px
+						width: 14px
+						background-image: linear-gradient(to top, #fecc00, #ffed00)
+						margin: -7px 0 0 -7px
+						transition: .2s linear
+						opacity: 0
+						transform: scale(0) rotate(-720deg)
+						border-radius: 50%
+				img
+					max-width: 24px
+					margin-left: 12px
+				span
+					color: #212121
+					margin-left: 10px
+				&.filter-active
+					div::after
+						opacity: 1
+						transform: scale(1) rotate(0deg)
+						border-radius: 0
+	&-info
+		display: none
+		&__active
+			display: block
+	&-mapPhoto
+		height: 720px
+		background-size: cover!important
+		height: 720px
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 99
+	&-mark
+		position: absolute
+		cursor: pointer
+	&-ico
+		position: relative
+		min-height: 70.2px
+		min-width: 51.2px
+		background-size: contain
+		background-repeat: no-repeat
+		background-image: url(../img/map-mark-inf.svg)
+		img
+			position: absolute
+			top: 12px
+			left: 50%
+			transform: translate(-50%,0)
+			max-width: 28px
+			width: 100%
+	&-descr
+		position: absolute
+		background: #fff 
+		padding: 31px 29px
+		border-radius: 10px
+		min-width: 226px
+		text-align: center
+		left: 48%
+		top: 110%
+		transform: translate(-50%,20px)
+		opacity: 0
+		transition: .2s linear
+		box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.07)
+		&::after
+			content: ''
+			position: absolute
+			top: -10px
+			left: 50%
+			height: 0
+			width: 0
+			border-bottom: 10px solid #fff 
+			border-right: 10px solid transparent
+			border-left: 10px solid transparent
+			margin-left: -10px
+		p 
+			color: #212121
+			line-height: 1
+	&-map
+		height: 720px
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+	&-wrap
+		height: 720px
+		position: relative
+
+.infrastructure-ico
+	&:hover + div
+		opacity: 1
+		transform: translate(-50%,0)
+
+.infrastructure-mark
+	&.infrastructure-descr__active
+		.infrastructure-descr
+			opacity: 1
+			transform: translate(-50%,0)
+
+.infrastructure-descr__active-remove
+	opacity: 0
 
 @import "_media"
