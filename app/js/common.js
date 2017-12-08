@@ -116,7 +116,7 @@
             $('.modal-success').addClass('modal-close');
         });
 
-        $(".modalbox").fancybox();
+        $(".modalbox").add('a[href="#feedback"]').fancybox();
         $("#f_contact").submit(function () {
             return false;
         });
