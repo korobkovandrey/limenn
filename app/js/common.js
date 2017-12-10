@@ -116,7 +116,21 @@
             $('.modal-success').addClass('modal-close');
         });
 
-        $(".modalbox").add('a[href="#feedback"]').fancybox();
+        $('.partner-trigger').on('click', function(){
+            $('#feedback').find('input[name="partner_title"]').val($(this).data('partner') || '');
+        });
+
+        $(".modalbox").add('a[href="#feedback"]').fancybox({
+            beforeClose: function (instance, current) {
+                var $m;
+                if(current.$content && current.$content.length || false){
+                    $m = current.$content;
+                }else{
+                    $m = $('#feedback');
+                }
+                $m.find('input[name="partner_title"]').val('');
+            }
+        });
         $("#f_contact").submit(function () {
             return false;
         });
