@@ -1867,18 +1867,22 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 	padding-top: 15px
 	li
 		list-style: none
-		a
+		a,
+		span
 			display: block
 			color: #373737
 			font-size: 21px
 			height: 50px
-			min-width: 50px
 			text-align: center
 			padding: 12px
 			margin-right: 20px
+		a
+			min-width: 50px
 			&.pagination-active,&:hover
 				color: #fff
 				background: #57c8ff
+		span
+			padding: 12px 0
 
 /* -- content-page -- */
 .content
