@@ -149,9 +149,12 @@
 
 
         function deleteC(name, time) {
-            setTimeout(function () {
-                $('.' + name).addClass('div-remove');
-            }, time);
+            var $t = $('.' + name);
+            if($t.length){
+                setTimeout(function () {
+                    $t.addClass('div-remove');
+                }, time);
+            }
         }
 
         deleteC('banner-cloud__1', 54000);
