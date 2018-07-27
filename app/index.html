@@ -11,6 +11,7 @@
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<meta name="theme-color" content="#000">
 	<meta name="msapplication-navbutton-color" content="#000">
@@ -25,8 +26,8 @@
 		<div class="header-row">
 			<div class="header-logo">
 				<a href="#">
-					<img class="header-logo__1" src="img/logo.svg" alt="harmony">
-					<img class="header-logo__2" src="img/logo-2.svg" alt="harmony">
+					<img class="header-logo__1" src="img/logo.png" alt="harmony">
+					<img class="header-logo__2" src="img/logo-2.png" alt="harmony">
 				</a>
 			</div>
 			<nav class="header-nav">
@@ -77,7 +78,7 @@
 	<!-- end header -->
 	<!-- start banner -->
 	<section class="banner">
-		<div class="banner-cloud  banner-cloud__1"></div>
+<!-- 		<div class="banner-cloud  banner-cloud__1"></div>
 		<div class="banner-cloud  banner-cloud__2"></div>
 		<div class="banner-cloud  banner-cloud__3"></div>
 		<div class="banner-cloud  banner-cloud__4"></div>
@@ -93,13 +94,16 @@
 		<div class="banner-cloud  banner-cloud__14"></div>
 		<div class="banner-cloud  banner-cloud__15"></div>
 		<div class="banner-cloud  banner-cloud__16"></div>
-		<div class="banner-cloud  banner-cloud__17"></div>
+		<div class="banner-cloud  banner-cloud__17"></div> -->
 		<div class="wrapper">
 			<div class="banner-descr">
-				<h1 class="banner-descr__title"><span>Жилой комплекс</span>Гармония</h1>
-				<p class="banner-descr__subtitle">счастливая история</p>
+				<h1 class="banner-descr__title">Лайм</h1>
+				<p class="banner-descr__subtitle">Жилой комплекс</p>
 				<div class="banner-descr__link">
-					<a href="#feedback" rel="nofollow" class="modalbox btn-primary">Выбрать таунхаус</a>
+					<a href="#feedback" rel="nofollow" class="modalbox btn-primary">Выбрать квартиру</a>
+					<p class="banner-descr__link-text">
+						от 23 000 руб. за м
+					</p>
 				</div>
 			</div>
 		</div>
@@ -347,14 +351,67 @@
 		</div>
 	</section>
 	<!-- end gallery -->
-	<!-- start map -->
-	<section class="map">
+	<!-- start content-news -->
+	<section class="content-news content-index-news">
 		<div class="wrapper">
 			<div class="section-header">
 				<div class="section-header__ico">
 					<picture>
 					 	<source srcset="img/section-ico-4.svg" type="image/svg+xml">
 					 	<img src="img/section-ico-4.png" alt="Olymp">
+					</picture>
+				</div>
+				<h2 class="section-header__title">Последние новости</h2>
+			</div>
+			<div class="news-row">
+				<article class="news-article">
+					<h3 class="news-article__title">Специальное летнее предложение</h3>
+					<p class="news-article__text">Двухкомнатные квартиры по спец. цене при покупке за материнский капитал.</p>
+					<a href="#" class="news-article__link">Подробнее</a>
+				</article><!-- col(1) -->
+				<article class="news-article news-article__img" style="background: url(img/advantages-1.jpg);">
+					<h3 class="news-article__title">Сочное предложение для ипотеки</h3>
+					<p class="news-article__text">Мы договорились с банками и нашли для вас самые выгодные условия.</p>
+					<a href="#" class="news-article__link">Подробнее</a>
+				</article><!-- col(2) -->
+				<article class="news-article">
+					<h3 class="news-article__title">Режим работы в праздники</h3>
+					<p class="news-article__text">Изменения в режиме работы.</p>
+					<a href="#" class="news-article__link">Подробнее</a>
+				</article><!-- col(3) -->
+				<article class="news-article">
+					<h3 class="news-article__title">Первые жители уже получили свои ключи</h3>
+					<p class="news-article__text">Смотрите видео!</p>
+					<a href="#" class="news-article__link">Подробнее</a>
+				</article><!-- col(4) -->
+				<article class="news-article">
+					<h3 class="news-article__title">Кухня в подарок</h3>
+					<p class="news-article__text">При покупке квартиры до 24 апреля кухня в подарок!</p>
+					<a href="#" class="news-article__link">Подробнее</a>
+				</article><!-- col(5) -->
+				<article class="news-article news-article__img" style="background: url(img/advantages-4.jpg);">
+					<h3 class="news-article__title">Просто много апельсинов</h3>
+					<p class="news-article__text">Двухкомнатные квартиры по спец. цене при покупке за материнский капитал.</p>
+					<a href="#" class="news-article__link">Подробнее</a>
+				</article><!-- col(6) -->
+			</div>
+			<div class="content-news-show-more">
+				<a href="javascript:void(0)" class="btn-primary content-news-show-more__link">
+					Загрузить еще новости
+					<i class="fa fa-angle-down"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- end content-news -->
+	<!-- start map -->
+	<section class="map">
+		<div class="wrapper">
+			<div class="section-header">
+				<div class="section-header__ico">
+					<picture>
+					 	<source srcset="img/section-ico-5.svg" type="image/svg+xml">
+					 	<img src="img/section-ico-5.png" alt="Olymp">
 					</picture>
 				</div>
 				<h2 class="section-header__title">Инфраструктура</h2>
@@ -425,7 +482,7 @@
 				<div class="footer-top__row">
 					<div class="footer-top__column footer-top__column-logo">
 						<a href="#">
-							<img src="img/logo.svg" alt="harmony">
+							<img src="img/logo.png" alt="harmony">
 						</a>
 						<ul class="footer-social">
 							<li>
@@ -483,14 +540,14 @@
 						<div class="footer-top__column-last">
 							<a href="#feedback" rel="nofollow" class="modalbox btn-primary footer-top__link">Документы по проекту<img src="img/doc-white.svg" alt="harmony"></a>
 							<a href="tel:+78312136161" class="footer-top__phone">+7 (831) <span>213-61-61</span></a>
-							<a href="mailto:garmonia52@gmail.com" class="footer-top__mail">garmonia52@gmail.com</a>
+							<a href="mailto:garmonia52@gmail.com" class="footer-top__mail">lime52@gmail.com</a>
 						</div>
 					</div><!--col(3)-->
 				</div>
 			</div><!-- footer-top -->
 			<div class="footer-bottom">
 				<div class="footer-bottom__column">
-					<p>© ЖК «Гармония»</p>
+					<p>© ЖК «Лайм»</p>
 				</div>
 				<div class="footer-bottom__column">
 					<p>Информация на сайте не является публичной офертой.</p>
@@ -565,14 +622,14 @@
 
 	    var myPlacemark1 = new ymaps.Placemark([56.183630, 43.921347], {}, {
 	        iconLayout: 'default#image',
-	        iconImageHref: 'img/map-mark.svg',
+	        iconImageHref: 'img/map-mark.png',
 	        iconImageSize: [141, 97.5],
 	        iconImageOffset: [-70, -48.5]
 	    });
 
 	    var myPlacemark2 = new ymaps.Placemark([56.180722, 43.910168], {}, {
 	        iconLayout: 'default#image',
-	        iconImageHref: 'img/map-mark.svg',
+	        iconImageHref: 'img/map-mark.png',
 	        iconImageSize: [141, 97.5],
 	        iconImageOffset: [-70, -48.5]
 	    });

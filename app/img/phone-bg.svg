@@ -1,21 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="188px" height="170px" viewBox="0 0 188 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 2</title>
-    <desc>Created with Sketch.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="188" height="170" viewBox="0 0 188 170">
     <defs>
-        <linearGradient x1="50%" y1="-2.22044605e-14%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#90D7FF" offset="0%"></stop>
-            <stop stop-color="#56C7FF" offset="100%"></stop>
+        <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#2EB1A8"/>
+            <stop offset="100%" stop-color="#35A4B2"/>
         </linearGradient>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="main-1280" transform="translate(-1042.000000, 0.000000)" fill="url(#linearGradient-1)">
-            <g id="Group-11" transform="translate(40.000000, 0.000000)">
-                <g id="Group-2" transform="translate(1002.000000, 0.000000)">
-                    <path d="M0,0 L188,0 L188,164.765383 L188,164.765383 C188,167.526807 185.761424,169.765383 183,169.765383 C182.396171,169.765383 181.797335,169.656008 181.232493,169.442553 L94,136.477316 L6.76750673,169.442553 L6.76750673,169.442553 C4.18437702,170.41872 1.29899693,169.11602 0.32282992,166.53289 C0.109375576,165.968048 2.5370418e-15,165.369212 6.21724894e-15,164.765383 L0,0 Z" id="Rectangle-2"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+    <path fill="url(#a)" fill-rule="evenodd" d="M0 0h188v164.765a5 5 0 0 1-6.768 4.678L94 136.477 6.768 169.443A5 5 0 0 1 0 164.765V0z"/>
 </svg>

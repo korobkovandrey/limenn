@@ -109,7 +109,7 @@
 		&-phone
 			margin-right: 63px
 			z-index: 100
-			background-image: linear-gradient(to bottom, #90d7ff, #56c7ff)
+			background-image: linear-gradient(to bottom, #2eb1a8, #35a4b2)
 			&__flag
 				display: flex
 				flex-flow: row wrap
@@ -123,6 +123,7 @@
 				justify-content: space-between
 				align-items: center
 				box-shadow: none
+				background: none
 				p 
 					display: none
 			&__link
@@ -788,6 +789,9 @@
 			padding: 20px 10px 25px
 
 @media only screen and (max-width : 400px)
+	.content-news-show-more__link 
+		max-width: 290px
+
 	.offers
 		&-column
 			max-width: 280px
@@ -802,10 +806,10 @@
 				font-size: 12px
 				max-width: 133px
 			&__link
-				width: 82.5px
-				height: 91.8px
-				bottom: -13px
-				right: 65.8px
+				// width: 82.5px
+				// height: 91.8px
+				bottom: 15px
+				right: 55px
 			&__img
 				max-width: 105px
 		&-link__all
@@ -860,3 +864,4 @@
 			margin-bottom: 10px
 	.content-building__year li a 
 		font-size: 11px
+
